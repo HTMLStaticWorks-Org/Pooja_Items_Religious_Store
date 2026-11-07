@@ -1,0 +1,15 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch and temp files
+scratch/
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+
+# IDE & Editor folders
+.vscode/
+.idea/

@@ -1,0 +1,515 @@
+/* ==========================================================================
+   DivyaKala — Sacred Heritage & Artisanal Pooja Emporium
+   Master Stylesheet: Variables, Light/Dark Themes, RTL, Layouts & Animations
+   ========================================================================== */
+
+@import url('../fonts/fonts.css');
+
+:root {
+  /* Brand Palette - Light Mode Default */
+  --bg-primary: #FFF9EF;
+  --bg-secondary: #F6ECDC;
+  --bg-tertiary: #E8D8BF;
+  --bg-surface: #FFFFFF;
+  --bg-glass: rgba(255, 249, 239, 0.88);
+  --bg-header-scrolled: rgba(255, 249, 239, 0.96);
+
+  --text-primary: #2B1D16;
+  --text-secondary: #49362A;
+  --text-muted: #6E5544;
+  --text-on-dark: #FFF9EF;
+
+  --brand-gold: #C69B45;
+  --brand-gold-hover: #AD8330;
+  --brand-gold-soft: rgba(198, 155, 69, 0.16);
+  --brand-maroon: #702B32;
+  --brand-maroon-dark: #521D22;
+  --brand-saffron: #E99A36;
+  --brand-sandal: #E8D8BF;
+  --brand-brown: #49362A;
+
+  --border-subtle: rgba(198, 155, 69, 0.28);
+  --border-strong: rgba(198, 155, 69, 0.55);
+  --shadow-soft: 0 12px 32px -8px rgba(73, 54, 42, 0.10);
+  --shadow-elevated: 0 22px 48px -12px rgba(73, 54, 42, 0.18);
+  --shadow-gold: 0 10px 28px -6px rgba(198, 155, 69, 0.32);
+}
+
+html.dark,
+[data-theme="dark"] {
+  --bg-primary: #140F0D;
+  --bg-secondary: #1D1512;
+  --bg-tertiary: #281E19;
+  --bg-surface: #211814;
+  --bg-glass: rgba(29, 21, 18, 0.90);
+  --bg-header-scrolled: rgba(20, 15, 13, 0.96);
+
+  --text-primary: #FFF9EF;
+  --text-secondary: #E8D8BF;
+  --text-muted: #C4B097;
+  --text-on-dark: #FFF9EF;
+
+  --brand-gold: #D8AF57;
+  --brand-gold-hover: #E7C26E;
+  --brand-gold-soft: rgba(216, 175, 87, 0.18);
+  --brand-maroon: #9E3E47;
+  --brand-maroon-dark: #3A161A;
+  --brand-saffron: #F2A84B;
+
+  --border-subtle: rgba(216, 175, 87, 0.24);
+  --border-strong: rgba(216, 175, 87, 0.52);
+  --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.48);
+  --shadow-elevated: 0 24px 54px -12px rgba(0, 0, 0, 0.68);
+  --shadow-gold: 0 10px 30px -6px rgba(216, 175, 87, 0.25);
+}
+
+/* Base Reset & Prevent Horizontal Overflow Across All Breakpoints (360px - 1920px) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+h1, h2, h3, h4, .heading-serif {
+  font-family: var(--font-serif);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Theme Surface & Text Utility Classes (Guaranteed Contrast in Light & Dark Mode) */
+.bg-theme-primary { background-color: var(--bg-primary); }
+.bg-theme-secondary { background-color: var(--bg-secondary); }
+.bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.bg-theme-surface { background-color: var(--bg-surface); }
+.bg-theme-glass {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-theme-primary { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-muted { color: var(--text-muted); }
+.text-brand-gold { color: var(--brand-gold); }
+.text-brand-maroon { color: var(--brand-maroon); }
+.text-brand-saffron { color: var(--brand-saffron); }
+
+.border-theme { border-color: var(--border-subtle); }
+.border-theme-strong { border-color: var(--border-strong); }
+.shadow-theme-soft { box-shadow: var(--shadow-soft); }
+.shadow-theme-elevated { box-shadow: var(--shadow-elevated); }
+
+/* Sacred Decorative Borders & Section Dividers */
+.sacred-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: var(--brand-gold-soft);
+  color: var(--brand-gold);
+  border: 1px solid var(--border-strong);
+}
+
+.btn-sacred-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap !important;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  min-height: 48px;
+  box-sizing: border-box;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #702B32 0%, #8E3740 50%, #C69B45 100%);
+  background-size: 160% 160%;
+  color: #FFF9EF !important;
+  border: 1px solid rgba(255, 249, 239, 0.25);
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, background-position 0.4s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-sacred-primary:hover {
+  transform: translateY(-2px);
+  background-position: 100% 50%;
+  box-shadow: 0 14px 32px -6px rgba(198, 155, 69, 0.48);
+}
+
+.btn-sacred-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap !important;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  min-height: 48px;
+  box-sizing: border-box;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #C69B45 0%, #E99A36 100%);
+  color: #1F140E !important;
+  border: 1px solid rgba(255, 249, 239, 0.35);
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), filter 0.28s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-sacred-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.btn-sacred-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap !important;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  min-height: 48px;
+  box-sizing: border-box;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--brand-gold);
+  transition: all 0.28s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-sacred-outline:hover {
+  background: var(--brand-gold);
+  color: #1F140E !important;
+  transform: translateY(-2px);
+}
+
+/* Header & Navigation Transitions */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-glass);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  background-color: var(--bg-header-scrolled);
+  box-shadow: var(--shadow-soft);
+}
+
+.nav-link-sacred {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  padding: 0.45rem 0.2rem;
+  transition: color 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-link-sacred::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-maroon), var(--brand-gold), var(--brand-saffron));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link-sacred:hover,
+.nav-link-sacred.active {
+  color: var(--brand-gold);
+}
+
+.nav-link-sacred:hover::after,
+.nav-link-sacred.active::after {
+  transform: scaleX(1);
+}
+
+/* Distinct Section Shapes & Image Frames (Section 6 Requirement) */
+.arch-frame {
+  border-radius: 180px 180px 24px 24px;
+  overflow: hidden;
+  border: 2px solid var(--border-strong);
+}
+
+.lotus-curve-frame {
+  border-radius: 36px 8px 36px 8px;
+  overflow: hidden;
+  border: 1.5px solid var(--border-subtle);
+}
+
+/* Product & Category Card Hover & 3D Depth Effects (Section 7 Requirement) */
+.sacred-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s ease, border-color 0.38s ease;
+}
+
+.sacred-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--brand-gold);
+}
+
+.img-zoom-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-zoom-wrap img {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sacred-card:hover .img-zoom-wrap img,
+.img-zoom-wrap:hover img {
+  transform: scale(1.06);
+}
+
+/* Subtle Floating Animation for CTA Decorative Elements */
+@keyframes floatSacred {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+@keyframes pulseAura {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+.animate-float-sacred {
+  animation: floatSacred 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-aura {
+  animation: pulseAura 4s ease-in-out infinite;
+}
+
+/* Custom Form Controls */
+.sacred-input {
+  width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 0.85rem;
+  padding: 0.82rem 1.1rem;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sacred-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.sacred-input:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+  box-shadow: 0 0 0 3px var(--brand-gold-soft);
+}
+
+.sacred-input.input-error {
+  border-color: #DC2626;
+}
+
+/* RTL Layout Support (Section 10 Requirement) */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .space-x-reverse-rtl > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Accessibility & Reduced Motion Support (Section 7 Requirement) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile Animation Reduction & Small Viewport Safeguards (360px - 640px) */
+@media (max-width: 640px) {
+  .sacred-card:hover {
+    transform: translateY(-2px);
+  }
+  .arch-frame {
+    border-radius: 110px 110px 18px 18px;
+  }
+}
+
+/* Responsive Viewport Rules: Active on 1024px, Tablet (768px-1023px) & Mobile (< 768px) */
+@media (max-width: 1279px) {
+  .site-header {
+    overflow-x: clip;
+  }
+  #dk-mobile-menu-btn {
+    display: inline-flex !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #dk-mobile-menu-btn {
+    display: none !important;
+  }
+  #dk-mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Original Social Media Icons & Interactive Hover Effects
+   ========================================================================== */
+.social-icon-btn {
+  width: 2.375rem; /* 38px */
+  height: 2.375rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(198, 155, 69, 0.45);
+  background-color: rgba(36, 17, 20, 0.7);
+  color: #FFF9EF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Instagram Authentic Sunset Gradient Hover */
+.social-icon-btn.hover-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(214, 36, 159, 0.5);
+}
+
+/* YouTube Authentic Crimson Red Hover */
+.social-icon-btn.hover-youtube:hover {
+  background-color: #FF0000;
+  border-color: #FF0000;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(255, 0, 0, 0.5);
+}
+
+/* Facebook Authentic Royal Blue Hover */
+.social-icon-btn.hover-facebook:hover {
+  background-color: #1877F2;
+  border-color: #1877F2;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.5);
+}
+
+/* WhatsApp Authentic Emerald Green Hover */
+.social-icon-btn.hover-whatsapp:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+}
+
+/* Email / Concierge Authentic Temple Gold Hover */
+.social-icon-btn.hover-mail:hover {
+  background-color: #C69B45;
+  border-color: #C69B45;
+  color: #1F140E;
+  box-shadow: 0 6px 18px rgba(198, 155, 69, 0.5);
+}
+
+/* ==========================================================================
+   Back to Top Button - Positioned in the Bottom-Right Corner
+   ========================================================================== */
+#dk-back-to-top {
+  position: fixed !important;
+  bottom: 1.5rem !important;
+  right: 1.5rem !important;
+  left: auto !important;
+  z-index: 40 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@media (min-width: 640px) {
+  #dk-back-to-top {
+    bottom: 2rem !important;
+    right: 2rem !important;
+  }
+}
+
+#dk-back-to-top:hover {
+  transform: translateY(-3px) scale(1.1) !important;
+  box-shadow: 0 0 20px rgba(198, 155, 69, 0.6) !important;
+}
+
+[dir="rtl"] #dk-back-to-top {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+  [dir="rtl"] #dk-back-to-top {
+    left: 2rem !important;
+  }
+}
+

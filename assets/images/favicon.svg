@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="64" height="64" role="img" aria-label="DivyaKala Favicon">
+  <defs>
+    <linearGradient id="dkGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6D379" />
+      <stop offset="45%" stop-color="#C69B45" />
+      <stop offset="100%" stop-color="#9A6F21" />
+    </linearGradient>
+    <linearGradient id="dkFlameGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9EF" />
+      <stop offset="40%" stop-color="#E99A36" />
+      <stop offset="100%" stop-color="#702B32" />
+    </linearGradient>
+    <radialGradient id="dkSanctumBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#492024" />
+      <stop offset="100%" stop-color="#241114" />
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#dkSanctumBg)" stroke="url(#dkGoldGrad)" stroke-width="4" />
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#E99A36" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.75" />
+  <path d="M30 82 C30 50, 44 30, 60 20 C76 30, 90 50, 90 82" fill="none" stroke="url(#dkGoldGrad)" stroke-width="2.2" opacity="0.65" />
+  <path d="M60 96 C46 96, 34 88, 30 78 C40 78, 50 84, 60 90 C70 84, 80 78, 90 78 C86 88, 74 96, 60 96 Z" fill="url(#dkGoldGrad)" />
+  <path d="M36 70 Q60 84 84 70 L76 82 Q60 90 44 82 Z" fill="url(#dkGoldGrad)" />
+  <path d="M60 25 C60 25, 45 45, 49 58 C52 66, 68 66, 71 58 C75 45, 60 25, 60 25 Z" fill="url(#dkFlameGrad)" stroke="#F6D379" stroke-width="1.2" />
+  <path d="M60 36 C60 36, 53 48, 55 56 C57 61, 63 61, 65 56 C67 48, 60 36, 60 36 Z" fill="#FFF9EF" opacity="0.9" />
+  <circle cx="60" cy="15" r="2.5" fill="#F6D379" />
+</svg>
+

@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DivyaKala — Sacred Heritage &amp; Artisanal Pooja Items Emporium | Home 1</title>
+  <meta name="description"
+    content="Discover DivyaKala, India's premier devotional and luxury religious store for Swamimalai brass deity idols, Kumbakonam diyas, Nakshi pooja thalis, Nepali Rudraksha, and Vedic festival samagri." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Early Theme & RTL Sync to Prevent Flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('divyakala_theme') || 'light';
+        var d = localStorage.getItem('divyakala_dir') || 'ltr';
+        if (t === 'dark') document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d);
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN (v3.4) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FFF9EF',
+            templeGold: '#C69B45',
+            deepMaroon: '#702B32',
+            saffron: '#E99A36',
+            sandalwood: '#E8D8BF',
+            deepBrown: '#49362A'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#702B32] selection:text-[#FFF9EF]">
+
+  <!-- Top Auspicious Panchangam Announcement Bar -->
+  <div class="bg-[#702B32] text-[#FFF9EF] text-xs py-2 px-4 border-b border-[#C69B45]/40">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <p class="font-medium tracking-wide flex items-center gap-2">
+        <span class="text-[#E99A36]">✦</span>
+        <span>Shubh Muhurta Dispatch: Complimentary Energized Kashi Vibhuti &amp; Silk Wrapping on Orders Above
+          ₹1,999</span>
+      </p>
+      <div class="hidden sm:flex items-center gap-4 text-[#E8D8BF]">
+        <a href="pages/festival-calendar.html" class="hover:text-[#FFF9EF] underline underline-offset-4">Vedic
+          Panchangam 2026–27</a>
+        <span>•</span>
+        <a href="pages/contact.html" class="hover:text-[#FFF9EF]">Archaka Pooja Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Premium Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      <!-- Brand Logo (Image Separate from Brand Name, Clickable to Home 1) -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0 focus:outline-none"
+        aria-label="DivyaKala Home 1">
+        <img src="assets/images/logo-divyakala.svg" alt="DivyaKala Sacred Kalash Emblem"
+          class="w-9 h-9 sm:w-11 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
+          width="44" height="44" />
+        <div class="flex flex-col">
+          <span
+            class="heading-serif text-xl sm:text-2xl font-bold tracking-tight text-theme-primary leading-tight">DivyaKala</span>
+          <span
+            class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-brand-gold font-semibold">Sacred
+            Pooja Emporium</span>
+        </div>
+      </a>
+
+      <!-- Desktop Primary Navigation -->
+      <nav class="hidden xl:flex items-center gap-6" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link-sacred active" aria-current="page">Home 1</a>
+        <a href="pages/home-2.html" class="nav-link-sacred">Home 2</a>
+        <a href="pages/about.html" class="nav-link-sacred">About</a>
+        <a href="pages/products.html" class="nav-link-sacred">Products</a>
+        <a href="pages/festival-calendar.html" class="nav-link-sacred">Festival Calendar</a>
+        <a href="pages/contact.html" class="nav-link-sacred">Contact</a>
+      </nav>
+
+      <!-- Header Utility & Action Icons (Desktop xl: 1280px+) -->
+      <div class="hidden xl:flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0"
+          aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+
+        <!-- Primary Header CTA: Sign Up -->
+        <a href="pages/signup.html" class="btn-sacred-primary text-xs px-4 py-2.5 whitespace-nowrap shrink-0">
+          <span>Sign Up</span>
+        </a>
+      </div>
+
+      <!-- Mobile, Tablet & 1024px Compact Header Controls -->
+      <div class="flex xl:hidden items-center gap-1.5 sm:gap-2.5 shrink-0">
+
+        <!-- Hamburger Menu Button: Active on 1024px, Tablet & Mobile -->
+        <button type="button" id="dk-mobile-menu-btn"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="dk-mobile-menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile, Tablet & 1024px Responsive Navigation Drawer -->
+    <div id="dk-mobile-menu"
+      class="hidden xl:hidden bg-theme-surface border-b border-theme-strong px-4 pt-3 pb-6 shadow-theme-elevated">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-theme">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Sacred Navigation &amp; Actions</span>
+        <button type="button" id="dk-mobile-menu-close"
+          class="text-xs font-semibold text-theme-muted hover:text-theme-primary px-2 py-1">Close ✕</button>
+      </div>
+
+      <!-- EXACT ALIGNED UTILITY ICONS ROW (Search, Wishlist, Cart, Theme, RTL) -->
+      <div
+        class="flex items-center justify-center sm:justify-start gap-2 sm:gap-2.5 py-3 px-3 rounded-2xl bg-theme-secondary border border-theme mb-4 overflow-x-auto">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0 shadow-sm"
+          aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links List -->
+      <nav class="flex flex-col space-y-2" aria-label="Mobile Navigation">
+        <a href="index.html" class="px-3 py-2.5 rounded-xl bg-[#702B32] text-[#FFF9EF] font-semibold text-sm">Home 1</a>
+        <a href="pages/home-2.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 2</a>
+        <a href="pages/about.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">About</a>
+        <a href="pages/products.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Products</a>
+        <a href="pages/festival-calendar.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Festival Calendar</a>
+        <a href="pages/contact.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Contact</a>
+        <div class="pt-3 border-t border-theme">
+          <a href="pages/signup.html" class="btn-sacred-primary text-xs py-2.5 text-center w-full">Sign Up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT — HOME 1 (EXACTLY 7 SECTIONS)
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- SECTION 1: PREMIUM HERO SECTION (Split Asymmetrical Arch & Floating Sanctum Composition) -->
+    <section id="h1-section-hero"
+      class="relative overflow-hidden py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-[var(--bg-secondary)] via-[var(--bg-primary)] to-[var(--bg-primary)] border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Hero Left Column: Editorial Headline & Devotional CTAs -->
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2.5 sacred-pill">
+              <span>✦</span>
+              <span>Shilpa Shastra Certified • Kumbakonam &amp; Kashi Guilds</span>
+            </div>
+            <h1 class="heading-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-primary leading-[1.12]">
+              Elevate Every Daily <span class="text-brand-gold italic">Sandhya &amp; Archana</span> Into a Sacred Temple
+              Ritual
+            </h1>
+            <p class="text-base sm:text-lg text-theme-secondary leading-relaxed max-w-xl">
+              From lost-wax cast Swamimalai Panchaloha-style idols and heirloom Nakshi brass thalis to lab-certified
+              Himalayan Rudraksha and charcoal-free temple floral dhoop—curated with Vedic purity for your home mandir.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <a href="pages/products.html" class="btn-sacred-primary flex-1 min-w-[200px] max-w-full whitespace-nowrap text-center justify-center py-3.5">
+                <span>Explore Sacred Catalog</span>
+              </a>
+              <a href="pages/festival-calendar.html" class="btn-sacred-outline flex-1 min-w-[200px] max-w-full whitespace-nowrap text-center justify-center py-3.5">
+                <span>Shop by Festival Muhurta</span>
+              </a>
+            </div>
+            <!-- Trust Metrics Strip -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-theme">
+              <div>
+                <p class="heading-serif text-2xl sm:text-3xl font-bold text-brand-gold">340+</p>
+                <p class="text-xs text-theme-muted font-medium">Master Sthapati Artisans</p>
+              </div>
+              <div>
+                <p class="heading-serif text-2xl sm:text-3xl font-bold text-brand-gold">100%</p>
+                <p class="text-xs text-theme-muted font-medium">Virgin Brass &amp; Pure Copper</p>
+              </div>
+              <div>
+                <p class="heading-serif text-2xl sm:text-3xl font-bold text-brand-gold">4.9 ★</p>
+                <p class="text-xs text-theme-muted font-medium">48,000+ Blessed Homes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Gopuram Arch Composition + Overlapping Floating Idol Card -->
+          <div class="lg:col-span-5 relative" data-aos="zoom-in" data-aos-delay="120">
+            <div class="relative mx-auto max-w-lg lg:max-w-none">
+              <div class="arch-frame shadow-theme-elevated bg-theme-surface">
+                <img src="assets/images/h1-hero-main.webp"
+                  alt="Royal Ashtalakshmi Brass Pooja Thali lit with sacred Panchamukhi diya flames and marigold blossoms"
+                  class="w-full h-[360px] sm:h-[460px] object-cover" width="1400" height="950" />
+              </div>
+              <!-- Floating Overlapping Secondary Image Card -->
+              <div
+                class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-left-6 bg-theme-surface border-2 border-theme-strong rounded-2xl p-3 shadow-theme-elevated max-w-xs flex items-center gap-3.5 animate-float-sacred">
+                <img src="assets/images/h1-hero-accent.webp"
+                  alt="Handcrafted Swamimalai Brass Siddhi Vinayak Ganesha Idol"
+                  class="w-20 h-24 rounded-xl object-cover shrink-0 border border-theme" width="900" height="1050" />
+                <div>
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gold block">Sanctum
+                    Spotlight</span>
+                  <h2 class="heading-serif text-lg font-bold text-theme-primary leading-snug">Swamimalai Brass Ganesha
+                  </h2>
+                  <p class="text-xs text-theme-muted mt-0.5">Prana-Pratishtha Ready • ₹6,250</p>
+                  <button type="button" data-add-to-cart data-product-id="dk-h1-3"
+                    class="mt-1.5 text-xs font-bold text-brand-maroon dark:text-brand-gold hover:underline">+ Add to
+                    Sacred Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SHOP BY CATEGORIES (8 Mandatory Categories in Bento & Arch Gallery Layout) -->
+    <section id="h1-section-categories" class="py-16 sm:py-24 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" data-aos="fade-up">
+          <div>
+            <span class="sacred-pill">Sacred Curations</span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">Shop by Eight
+              Sacred Categories</h2>
+          </div>
+          <p class="text-sm sm:text-base text-theme-secondary max-w-md">
+            Every offering in our emporium is crafted in accordance with traditional Agama and Shilpa texts—bringing
+            purity, longevity, and devotion to your altar.
+          </p>
+        </div>
+
+        <!-- 8 Distinct Category Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Category 1: Pooja Kits -->
+          <a href="pages/products.html?category=pooja-kits"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="50">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://media.istockphoto.com/id/1129642719/photo/copper-plate-with-marigold-flowers.jpg?b=1&s=612x612&w=0&k=20&c=2AD253FlluIJfAAg3EKPZul2923ApDb5Ykfg0jCU_bI="
+                alt="Complete Vedic Samagri and Sampoorna Pooja Kits in velvet heritage boxes"
+                class="w-full h-full object-cover" width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">32+
+                Samagri Items</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Pooja Kits</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Griha Pravesh, Vrat &amp; Havan Boxes</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 2: Idols -->
+          <a href="pages/products.html?category=idols"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa3Q75kgpXKwK_S8GESsVAF8P64IRSw6HQ1oFCTKPfEg&s=10"
+                alt="Hand-cast Swamimalai Panchaloha and brass Hindu deity idols" class="w-full h-full object-cover"
+                width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Lost-Wax
+                Cast</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Idols</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Brass, Bronze &amp; Panchaloha Murtis</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 3: Diyas -->
+          <a href="pages/products.html?category=diyas"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="150">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0ezvC4W3x-Gpfl0kE4jlGJn2mbpOMctG9adQ04soDA&s=10"
+                alt="Artisanal Kumbakonam brass Nilavilakku and Akhand Jyoti diyas" class="w-full h-full object-cover"
+                width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Sacred
+                Jyoti</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Diyas</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Nilavilakku, Akhand &amp; Pancharti Lamps</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 4: Incense Sticks -->
+          <a href="pages/products.html?category=incense"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcU8OXICmwtH6K_N5N31L04oQ1AQOJHpzT36YCMAYBpw&s=10"
+                alt="Hand-rolled Mysore sandalwood incense sticks and sambrani dhoop cones"
+                class="w-full h-full object-cover" width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Charcoal-Free</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Incense Sticks</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Temple Flower Agarbatti &amp; Sambrani</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 5: Rudraksha -->
+          <a href="pages/products.html?category=rudraksha"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="250">
+            <div class="img-zoom-wrap h-56">
+              <img src="assets/images/h1-cat-rudraksha.webp"
+                alt="Lab-certified Himalayan Nepali Rudraksha japa malas and pendants"
+                class="w-full h-full object-cover" width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">X-Ray
+                Verified</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Rudraksha</h3>
+                <p class="text-xs text-theme-muted mt-0.5">1 to 14 Mukhi Beads &amp; Japa Malas</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 6: Brass Items -->
+          <a href="pages/products.html?category=brass-items"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQltdJsrmECesWEN6ILON_LR-7jEoOLQNSVmVD3ZjCQ&s=10"
+                alt="Traditional Kumbakonam brass urlis, kalash pots, and abhishekam vessels"
+                class="w-full h-full object-cover" width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Heirloom
+                Grade</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Brass Items</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Urlis, Kalash, Panchapatra &amp; Stands</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 7: Pooja Thalis -->
+          <a href="pages/products.html?category=pooja-thalis"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="350">
+            <div class="img-zoom-wrap h-56">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdkNvk7SmCc_ip57HaoF2i4ynb3ly5UYnztlFq4SdKw&s"
+                alt="Engraved Nakshi brass and pure copper pooja thali sets" class="w-full h-full object-cover"
+                width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">7-Piece
+                Sets</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Pooja Thalis</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Ashtalakshmi Brass &amp; Copper Thalis</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+
+          <!-- Category 8: Spiritual Accessories -->
+          <a href="pages/products.html?category=accessories"
+            class="sacred-card group overflow-hidden flex flex-col justify-between" data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="img-zoom-wrap h-56">
+              <img src="https://images.pexels.com/photos/10686421/pexels-photo-10686421.jpeg"
+                alt="Bronze temple ghanti bells, haldi kumkum karandas, and wooden mandapams"
+                class="w-full h-full object-cover" width="850" height="950" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Sanctum
+                Craft</span>
+            </div>
+            <div class="p-5 flex items-center justify-between gap-3">
+              <div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition">
+                  Spiritual Accessories</h3>
+                <p class="text-xs text-theme-muted mt-0.5">Temple Bells, Shankh &amp; Mandapams</p>
+              </div>
+              <span
+                class="w-9 h-9 rounded-full border border-theme-strong flex items-center justify-center text-brand-gold shrink-0">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FESTIVAL ESSENTIALS (4 Curated Collections for Diwali, Navratri, Ganesh Chaturthi & Pongal) -->
+    <section id="h1-section-festivals" class="py-16 sm:py-24 bg-theme-secondary border-y border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12" data-aos="fade-right">
+          <div>
+            <span class="sacred-pill">Auspicious Utsav Collections</span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">Curated
+              Festival Essentials</h2>
+          </div>
+          <a href="pages/festival-calendar.html" class="btn-sacred-outline self-start lg:self-auto">
+            <span>View Full 2026–27 Festival Calendar</span>
+          </a>
+        </div>
+
+        <!-- 4-Card Equal Grid (Side by Side) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+          <!-- Diwali Feature Card -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between h-full" data-aos="fade-up">
+            <div class="img-zoom-wrap h-56 w-full relative shrink-0">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpV-NW7BIXZAA_D3T744ba0GDVr6C8Yp1ot5z8WfOhaw&s"
+                alt="Deepavali Mahalakshmi Kubera Pooja Thali and Panchamukhi Brass Diya Ensemble"
+                class="w-full h-full object-cover" width="950" height="750" loading="lazy" />
+            </div>
+            <div class="p-4 sm:p-5 xl:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Kartik Amavasya •
+                  Deepavali</span>
+                <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary mt-1 leading-snug">Diwali Lakshmi-Kubera
+                  Siddhi Collection</h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-1.5 line-clamp-3">
+                  Complete Pradosha Kaal Mahalakshmi Pujan ensemble with energized Shree Yantra, 11 Gomti Chakras, Kamal
+                  Gatta mala, and solid brass Akhand Deepam.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-theme flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-2 mt-auto">
+                <span class="text-xs sm:text-sm font-bold text-brand-gold shrink-0">From ₹2,490</span>
+                <a href="pages/festival-calendar.html#festival-essentials"
+                  class="btn-sacred-primary !text-xs !px-3 !py-2 text-center justify-center w-auto lg:w-full xl:w-auto whitespace-nowrap">Shop Diwali Kit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Navratri Feature Card -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between h-full" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="img-zoom-wrap h-56 w-full relative shrink-0">
+              <img src="https://m.media-amazon.com/images/I/71z22-qg80L.jpg"
+                alt="Sharad Navratri Copper Kalash Sthapana and Durga Shakti Pooja Kit"
+                class="w-full h-full object-cover" width="950" height="750" loading="lazy" />
+              <span
+                class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">9-Day
+                Ritual Ready</span>
+            </div>
+            <div class="p-4 sm:p-5 xl:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Shakti Upasana •
+                  Navratri</span>
+                <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary mt-1 leading-snug">Navratri Ghatasthapana
+                  &amp; Havan Ensemble</h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-1.5 line-clamp-3">Copper Purnakumbha Kalash, 9-day wind-protected Akhand
+                  Jyoti lamp, and Saptashati Havan samagri.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-2 mt-auto">
+                <span class="text-xs sm:text-sm font-bold text-brand-gold shrink-0">From ₹1,950</span>
+                <a href="pages/festival-calendar.html#festival-essentials"
+                  class="btn-sacred-primary !text-xs !px-3 !py-2 text-center justify-center w-auto lg:w-full xl:w-auto whitespace-nowrap">Shop Navratri Kit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ganesh Chaturthi Card -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between h-full" data-aos="fade-up"
+            data-aos-delay="150">
+            <div class="img-zoom-wrap h-56 w-full relative shrink-0">
+              <img src="https://m.media-amazon.com/images/I/71+HxLUQUwL._AC_UF894,1000_QL80_.jpg"
+                alt="Ganesh Chaturthi Siddhivinayak Murti and 21-Patra Archana Mandap Kit"
+                class="w-full h-full object-cover" width="950" height="750" loading="lazy" />
+            </div>
+            <div class="p-4 sm:p-5 xl:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Bhadrapada Shukla
+                  Chaturthi</span>
+                <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary mt-1 leading-snug">Ganesh Chaturthi
+                  Shodashopachara Box</h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-1.5 line-clamp-3">Brass Modak patra, Durva grass offering tray, red
+                  sandalwood paste, and carved wooden sinhasan.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-2 mt-auto">
+                <span class="text-xs sm:text-sm font-bold text-brand-gold shrink-0">From ₹2,190</span>
+                <a href="pages/festival-calendar.html#festival-essentials"
+                  class="btn-sacred-primary !text-xs !px-3 !py-2 text-center justify-center w-auto lg:w-full xl:w-auto whitespace-nowrap">Shop Vinayaka Kit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pongal & Makar Sankranti Card -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between h-full" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="img-zoom-wrap h-56 w-full relative shrink-0">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeq-y4FSA0I9h-UR2dv9GnyMAm0sz5qkvNRgkNuDqATA&s=10"
+                alt="Thai Pongal Heavy Bronze Pongal Paanai Pot and Copper Surya Arghya Vessel"
+                class="w-full h-full object-cover" width="950" height="750" loading="lazy" />
+            </div>
+            <div class="p-4 sm:p-5 xl:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Uttarayana Punyakalam •
+                  Pongal</span>
+                <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary mt-1 leading-snug">Thai Pongal &amp;
+                  Makar Sankranti Bronze Set</h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-1.5 line-clamp-3">
+                  Traditional heavy-gauge Kumbakonam bronze Pongal Paanai pot with auspicious turmeric-tie neck, paired
+                  with a hammered copper Surya Arghya lotah.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-theme flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-2 mt-auto">
+                <span class="text-xs sm:text-sm font-bold text-brand-gold shrink-0">From ₹3,650</span>
+                <a href="pages/festival-calendar.html#festival-essentials"
+                  class="btn-sacred-primary !text-xs !px-3 !py-2 text-center justify-center w-auto lg:w-full xl:w-auto whitespace-nowrap">Shop Pongal Set</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FEATURED BESTSELLERS (6 Unique Showcase Products with Quick View, Wishlist & Add to Cart) -->
+    <section id="h1-section-bestsellers" class="py-16 sm:py-24 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" data-aos="fade-up">
+          <div>
+            <span class="sacred-pill">Most Revered Offerings</span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">Featured
+              Sanctum Bestsellers</h2>
+          </div>
+          <a href="pages/products.html" class="btn-sacred-outline self-start md:self-auto">
+            <span>Browse All 12+ Catalog Creations</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <!-- Bestseller 1 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="50">
+            <div class="img-zoom-wrap h-72">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuVlyPrM3QXPpDT63y7-4No9DAUSqVf3vOvIPAGFkrnA&s=10"
+                alt="Kumbakonam Panchamukhi Nilavilakku Standing Brass Lamp" class="w-full h-full object-cover"
+                width="850" height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Bestseller</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-1"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Kumbakonam Nilavilakku to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-1"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Kumbakonam Nilavilakku" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Brass &amp; Copper Diyas</span>
+                  <span class="font-bold text-brand-gold">★ 4.9 (142)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Kumbakonam Panchamukhi
+                  Nilavilakku Lamp</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">Solid 3.2 kg virgin temple brass five-wick pedestal lamp
+                  for daily Sandhya deepam.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹4,850</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹5,600</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-1"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 2 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="100">
+            <div class="img-zoom-wrap h-72">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzbsImogVCE4kqxYnTrArjsuBNKnwVQPuaYRmwwNz-Q&s=10"
+                alt="Ashtalakshmi Embossed Pure Brass Pooja Thali 7-Piece Set" class="w-full h-full object-cover"
+                width="850" height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">Artisan
+                Pick</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-2"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Ashtalakshmi Thali to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-2"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Ashtalakshmi Thali" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Pooja Thalis</span>
+                  <span class="font-bold text-brand-gold">★ 4.9 (118)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Ashtalakshmi Embossed Brass Pooja
+                  Thali (7-Pc)</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">12-inch repoussé brass thali with kalash, ghanti bell,
+                  achamani, katoris &amp; diya.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹3,490</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹4,100</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-2"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 3 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="150">
+            <div class="img-zoom-wrap h-72">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WrweSW96fP8Y8EiKnsrQMQ2zF_FidsdWB0tVGvPRtAH56vvPpE8HsOQ&s=10"
+                alt="Prana-Pratishtha Brass Siddhi Vinayak Ganesha Murti" class="w-full h-full object-cover" width="850"
+                height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Sacred
+                Idol</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-3"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Siddhi Vinayak Murti to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-3"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Siddhi Vinayak Murti" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Deity Idols</span>
+                  <span class="font-bold text-brand-gold">★ 5.0 (204)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Prana-Pratishtha Brass Siddhi
+                  Vinayak Murti</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">Lost-wax cast 9-inch Chaturbhuja Ganesha on lotus peetham
+                  with removable prabhavali.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹6,250</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹7,200</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-3"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 4 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="200">
+            <div class="img-zoom-wrap h-72">
+              <img src="assets/images/h1-prod-4.webp" alt="Himalayan 5-Mukhi Authentic Rudraksha Japa Mala 108+1 Beads"
+                class="w-full h-full object-cover" width="850" height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">Lab
+                Certified</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-4"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Rudraksha Mala to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-4"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Rudraksha Mala" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Rudraksha</span>
+                  <span class="font-bold text-brand-gold">★ 4.8 (96)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Himalayan 5-Mukhi Rudraksha Japa
+                  Mala (108+1)</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">Natural Sankhuwasabha Nepali 8mm beads knotted in sacred
+                  crimson silk thread.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹1,950</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹2,400</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-4"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 5 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="250">
+            <div class="img-zoom-wrap h-72">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHvhuQK15Vg7sCJUOm_qzACrPzyheGn-1mxtFOYlIZdQ&s=10"
+                alt="Mysore Sandalwood and Temple Parijata Hand-Rolled Dhoop Cones" class="w-full h-full object-cover"
+                width="850" height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Charcoal-Free</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-5"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Mysore Sandalwood Dhoop to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-5"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Mysore Sandalwood Dhoop" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Incense &amp; Dhoop</span>
+                  <span class="font-bold text-brand-gold">★ 4.9 (310)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Mysore Sandalwood &amp; Parijata
+                  Dhoop Cones</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">Hand-rolled from upcycled temple florals, Halmaddi resin,
+                  and pure Santalum album oil.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹890</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹1,150</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-5"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bestseller 6 -->
+          <article class="sacred-card overflow-hidden flex flex-col justify-between" data-aos="zoom-in-up"
+            data-aos-delay="300">
+            <div class="img-zoom-wrap h-72">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6N8-h_88CacmupBtOiHM8h-YNaIOq8rQHaxHJU1Wsg&salign"
+                alt="Nandi Finial Heavy Temple Ghanti Bell in Aged Bronze" class="w-full h-full object-cover"
+                width="850" height="900" loading="lazy" />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">Omkar
+                Resonance</span>
+              <div class="absolute top-3 right-3 flex flex-col gap-2">
+                <button type="button" data-wishlist-btn data-product-id="dk-h1-6"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Save Nandi Temple Bell to wishlist">♥</button>
+                <button type="button" data-quickview-btn data-product-id="dk-h1-6"
+                  class="w-9 h-9 rounded-full bg-theme-surface/90 border border-theme flex items-center justify-center text-theme-primary hover:scale-110 transition"
+                  aria-label="Quick view Nandi Temple Bell" title="Quick View">👁</button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-theme-muted">
+                  <span class="uppercase tracking-wider font-semibold text-brand-gold">Spiritual Accessories</span>
+                  <span class="font-bold text-brand-gold">★ 4.9 (87)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary mt-1.5">Nandi Finial Heavy Temple Ghanti
+                  Bell</h3>
+                <p class="text-xs text-theme-secondary mt-1.5">Nachiarkoil acoustic bell-metal alloy tuned for sustained
+                  auspicious resonance.</p>
+              </div>
+              <div class="pt-3 border-t border-theme flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-xl font-bold text-theme-primary">₹2,150</span>
+                  <span class="text-xs line-through text-theme-muted ml-1.5">₹2,600</span>
+                </div>
+                <button type="button" data-add-to-cart data-product-id="dk-h1-6"
+                  class="btn-sacred-primary text-xs px-4 py-2.5">+ Add to Bag</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SACRED COLLECTIONS (Editorial Magazine-Style Three-Column Asymmetric Showcase) -->
+    <section id="h1-section-sacred-collections"
+      class="py-16 sm:py-24 bg-[#241215] text-[#FFF9EF] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
+          <span
+            class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs uppercase tracking-widest font-bold bg-[#C69B45]/20 text-[#F6D379] border border-[#C69B45]/50">
+            ✦ Curated Lookbook &amp; Sanctum Editions
+          </span>
+          <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-[#FFF9EF] mt-4">
+            Sacred Collections Crafted for Generational Reverence
+          </h2>
+          <p class="text-sm sm:text-base text-[#E8D8BF] mt-3 leading-relaxed">
+            Each DivyaKala edition brings together harmonious vessels cast from the same molten batch of virgin brass
+            and electrolytic copper—ensuring tonal and visual unity across your home mandir.
+          </p>
+        </div>
+
+        <!-- Editorial Staggered Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Collection I: Large Editorial Feature (6 cols) -->
+          <div
+            class="lg:col-span-6 rounded-3xl overflow-hidden border border-[#C69B45]/40 bg-[#32191D] flex flex-col justify-between"
+            data-aos="fade-right">
+            <div class="img-zoom-wrap h-80 sm:h-96">
+              <img src="assets/images/h1-sacred-sanctum.webp"
+                alt="The Home Mandir Sanctum Heritage Collection featuring Gaja-Lakshmi Murti and brass lamps"
+                class="w-full h-full object-cover" width="1000" height="800" loading="lazy" />
+            </div>
+            <div class="p-7 sm:p-8 space-y-4">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#E99A36] font-bold">Edition I • Complete
+                Sanctum</span>
+              <h3 class="heading-serif text-3xl font-bold text-[#FFF9EF]">The Griha Mandir Heritage Ensemble</h3>
+              <p class="text-sm text-[#E8D8BF] leading-relaxed">
+                Designed for new homes and sacred renovations: pairs a carved Rosewood wall mandapam with matching
+                Kumbakonam Nilavilakku lamps, Ashtalakshmi thali, and Nandi ghanti.
+              </p>
+              <div class="pt-2">
+                <a href="pages/products.html?category=idols" class="btn-sacred-gold text-xs px-5 py-3">Explore Sanctum Edition</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collections II & III Stacked Editorial Column (6 cols) -->
+          <div class="lg:col-span-6 flex flex-col justify-between gap-8">
+            <div
+              class="rounded-3xl overflow-hidden border border-[#C69B45]/40 bg-[#32191D] grid grid-cols-1 sm:grid-cols-12 items-center"
+              data-aos="fade-left" data-aos-delay="100">
+              <div class="sm:col-span-5 img-zoom-wrap h-60 sm:h-full">
+                <img src="assets/images/h1-sacred-abhishekam.webp"
+                  alt="Vedic Abhishekam and Panchamrit Copper Ritual Vessels" class="w-full h-full object-cover"
+                  width="900" height="750" loading="lazy" />
+              </div>
+              <div class="sm:col-span-7 p-6 sm:p-7 space-y-3">
+                <span class="text-xs uppercase tracking-[0.18em] text-[#E99A36] font-bold">Edition II • Vedic Water
+                  Rituals</span>
+                <h3 class="heading-serif text-2xl font-bold text-[#FFF9EF]">Abhishekam &amp; Panchamrit Vessels</h3>
+                <p class="text-xs sm:text-sm text-[#E8D8BF]">
+                  Pure hammered copper Purnakumbha kalash, tripod Shiva jaladhara patra, valampuri shankh stand, and
+                  achamani पात्र.
+                </p>
+                <a href="pages/products.html?category=brass-items"
+                  class="inline-flex items-center gap-1.5 text-xs font-bold text-[#F6D379] hover:underline pt-1">
+                  <span>Discover Abhishekam Vessels</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl overflow-hidden border border-[#C69B45]/40 bg-[#32191D] grid grid-cols-1 sm:grid-cols-12 items-center"
+              data-aos="fade-left" data-aos-delay="200">
+              <div class="sm:col-span-5 img-zoom-wrap h-60 sm:h-full">
+                <img src="assets/images/h1-sacred-arati.webp"
+                  alt="Sandhya Arati Panchamukhi Brass and Copper Lamps Collection" class="w-full h-full object-cover"
+                  width="900" height="750" loading="lazy" />
+              </div>
+              <div class="sm:col-span-7 p-6 sm:p-7 space-y-3">
+                <span class="text-xs uppercase tracking-[0.18em] text-[#E99A36] font-bold">Edition III • Sacred
+                  Illumination</span>
+                <h3 class="heading-serif text-2xl font-bold text-[#FFF9EF]">Sandhya Arati &amp; Deepadana Series</h3>
+                <p class="text-xs sm:text-sm text-[#E8D8BF]">
+                  Hand-balanced Pancharti lamps, wind-shielded borosilicate Akhand Jyoti diyas, and camphor karpooram
+                  holders.
+                </p>
+                <a href="pages/products.html?category=diyas"
+                  class="inline-flex items-center gap-1.5 text-xs font-bold text-[#F6D379] hover:underline pt-1">
+                  <span>Discover Sacred Diyas</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WHY CHOOSE US (Split Artisan Heritage Feature + 4 Sacred Pillar Cards) -->
+    <section id="h1-section-why-choose-us" class="py-16 sm:py-24 bg-theme-secondary border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header (Centered) -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
+          <span class="sacred-pill">The DivyaKala Covenant</span>
+          <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">Why Devotees
+            Across the World Trust Our Sanctum</h2>
+          <p class="text-sm sm:text-base text-theme-secondary mt-3 leading-relaxed">
+            We partner directly with GI-tagged temple craft clusters in Swamimalai, Kumbakonam, Nachiarkoil,
+            Varanasi, and Mysuru to preserve authentic Vedic craftsmanship.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <!-- Left: 4 Sacred Pillars (Text Cards) -->
+          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" data-aos="fade-right">
+            <!-- Card 1 -->
+            <div
+              class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme flex flex-col space-y-2.5">
+              <div class="w-10 h-10 rounded-xl bg-[#702B32] text-[#FFF9EF] flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary">1. Agama &amp; Shilpa Quality
+                Assurance</h3>
+              <p class="text-xs text-theme-secondary leading-relaxed">Every idol and yantra is inspected for
+                accurate iconography, auspicious proportions, and zero casting blemishes.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme flex flex-col space-y-2.5">
+              <div class="w-10 h-10 rounded-xl bg-[#702B32] text-[#FFF9EF] flex items-center justify-center shrink-0">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary">2. 100% Authentic &amp;
+                Lab-Verified</h3>
+              <p class="text-xs text-theme-secondary leading-relaxed">Virgin lead-free brass, 99.9% electrolytic
+                copper, and X-ray certified natural Nepali Rudraksha beads.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme flex flex-col space-y-2.5">
+              <div class="w-10 h-10 rounded-xl bg-[#702B32] text-[#FFF9EF] flex items-center justify-center shrink-0">
+                <i data-lucide="hammer" class="w-5 h-5"></i>
+              </div>
+              <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary">3. Hereditary Sthapati
+                Craftsmanship</h3>
+              <p class="text-xs text-theme-secondary leading-relaxed">Direct fair-trade patronage supporting 340+
+                hereditary temple metalworkers and women floral incense rollers.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme flex flex-col space-y-2.5">
+              <div class="w-10 h-10 rounded-xl bg-[#702B32] text-[#FFF9EF] flex items-center justify-center shrink-0">
+                <i data-lucide="truck" class="w-5 h-5"></i>
+              </div>
+              <h3 class="heading-serif text-lg sm:text-xl font-bold text-theme-primary">4. Secure Shopping &amp;
+                Muhurta Delivery</h3>
+              <p class="text-xs text-theme-secondary leading-relaxed">256-bit encrypted checkout and shock-proof
+                velvet-lined dispatch guaranteed to arrive before your pooja tithi.</p>
+            </div>
+          </div>
+
+          <!-- Right: Artisan Craftsmanship Visual (Reduced Image Card) -->
+          <div class="lg:col-span-4 flex justify-center" data-aos="fade-left">
+            <div
+              class="lotus-curve-frame shadow-theme-elevated bg-theme-surface w-full max-w-sm overflow-hidden border border-theme">
+              <div class="img-zoom-wrap h-64 sm:h-72 w-full flex items-center justify-center p-3 bg-white/50 dark:bg-black/20">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzQGUvLsVGtHx5KCimfCPTS9AaiZSwOgB3KzTOASChmlKxrCS16RD-Pxrv&s=10"
+                  alt="Master Sthapati artisan hand-finishing a traditional lost-wax bronze deity murti"
+                  class="w-full h-full object-contain" width="850" height="700" loading="lazy" />
+              </div>
+              <div class="p-4 sm:p-5 bg-theme-surface border-t border-theme shrink-0">
+                <p class="heading-serif text-base sm:text-lg font-bold text-theme-primary leading-snug">“Every murti is cast with
+                  mantra sankalpa, never mass-stamped in factories.”</p>
+                <p class="text-xs text-brand-gold font-semibold mt-1">— Sri Sundaramoorthy Sthapati, 7th-Generation
+                  Swamimalai Master</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CUSTOMER TESTIMONIALS & NEWSLETTER (Interactive Devotee Stories + Sacred Panchangam Subscription) -->
+    <section id="h1-section-testimonials-newsletter" class="py-16 sm:py-24 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <!-- Part A: Devotee Testimonials with Filter Tabs -->
+        <div>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10" data-aos="fade-up">
+            <div>
+              <span class="sacred-pill">Blessed Households</span>
+              <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">Voices from
+                Devotee Sanctums</h2>
+            </div>
+            <!-- Interactive Filter Pills for Reviews -->
+            <div class="flex flex-wrap gap-2" role="group" aria-label="Filter customer reviews">
+              <button type="button" data-review-tab="all"
+                class="px-4 py-2 rounded-full text-xs font-bold border border-theme-strong bg-[#702B32] text-[#FFF9EF] transition">All
+                Reviews</button>
+              <button type="button" data-review-tab="brassware"
+                class="px-4 py-2 rounded-full text-xs font-bold border border-theme text-theme-primary hover:border-theme-strong transition">Brass
+                Diyas &amp; Urlis</button>
+              <button type="button" data-review-tab="thalis"
+                class="px-4 py-2 rounded-full text-xs font-bold border border-theme text-theme-primary hover:border-theme-strong transition">Festival
+                Thalis</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <article data-review-card="brassware"
+              class="sacred-card p-6 flex flex-col justify-between space-y-4 transition-all duration-300"
+              data-aos="fade-up" data-aos-delay="50">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-gold font-bold text-sm">★★★★★ 5.0</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-theme-secondary text-theme-secondary font-semibold">Verified
+                    Griha Pravesh</span>
+                </div>
+                <p class="text-sm text-theme-secondary italic leading-relaxed">
+                  “The pair of Kumbakonam Panchamukhi Nilavilakku lamps we ordered for our Chennai Griha Pravesh have
+                  the heaviest, warmest golden lustre I have ever seen. Even our family priest asked where they were
+                  cast.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-theme">
+                <img src="assets/images/h1-rev-1.webp" alt="Ananya Iyer home mandir diya showcase"
+                  class="w-12 h-12 rounded-full object-cover border border-theme-strong shrink-0" width="600"
+                  height="600" loading="lazy" />
+                <div>
+                  <h3 class="text-sm font-bold text-theme-primary">Smt. Ananya Iyer</h3>
+                  <p class="text-xs text-theme-muted">Mylapore, Chennai • Nilavilakku Lamp</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 2 -->
+            <article data-review-card="thalis"
+              class="sacred-card p-6 flex flex-col justify-between space-y-4 transition-all duration-300"
+              data-aos="fade-up" data-aos-delay="120">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-gold font-bold text-sm">★★★★★ 5.0</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-theme-secondary text-theme-secondary font-semibold">Verified
+                    Festival Order</span>
+                </div>
+                <p class="text-sm text-theme-secondary italic leading-relaxed">
+                  “We gifted 15 Ashtalakshmi Brass Pooja Thali sets for our daughter's wedding tamboola. Each box
+                  arrived wrapped in maroon silk with sacred vibhuti and zero transit dents. Truly royal presentation.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-theme">
+                <img src="assets/images/h1-rev-2.webp" alt="Rajeshwari Deshmukh festival pooja thali showcase"
+                  class="w-12 h-12 rounded-full object-cover border border-theme-strong shrink-0" width="600"
+                  height="600" loading="lazy" />
+                <div>
+                  <h3 class="text-sm font-bold text-theme-primary">Dr. Rajeshwari Deshmukh</h3>
+                  <p class="text-xs text-theme-muted">Kothrud, Pune • Ashtalakshmi Thali</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 3 (Tab View: Spans 2 cols & Centered; Desktop: Single Col) -->
+            <article data-review-card="brassware"
+              class="sacred-card p-6 flex flex-col justify-between space-y-4 transition-all duration-300 md:col-span-2 md:w-full md:max-w-[calc(50%-0.75rem)] md:mx-auto xl:col-span-1 xl:max-w-none"
+              data-aos="fade-up" data-aos-delay="190">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-brand-gold font-bold text-sm">★★★★★ 5.0</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-theme-secondary text-theme-secondary font-semibold">Verified
+                    Collector</span>
+                </div>
+                <p class="text-sm text-theme-secondary italic leading-relaxed">
+                  “The 5-Mukhi Nepali Rudraksha mala came with its X-ray lab certificate, and the Mysore Parijata dhoop
+                  fills our courtyard with the exact fragrance of an ancient South Indian temple.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-theme">
+                <img src="assets/images/h1-rev-3.webp" alt="Vikramaditya Sharma brass urli arrangement"
+                  class="w-12 h-12 rounded-full object-cover border border-theme-strong shrink-0" width="600"
+                  height="600" loading="lazy" />
+                <div>
+                  <h3 class="text-sm font-bold text-theme-primary">Sri Vikramaditya Sharma</h3>
+                  <p class="text-xs text-theme-muted">Assi Ghat, Varanasi • Rudraksha &amp; Dhoop</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Part B: Auspicious Panchangam Newsletter Subscription Banner -->
+        <div
+          class="rounded-3xl bg-gradient-to-r from-[#521D22] via-[#702B32] to-[#49362A] p-8 sm:p-12 border-2 border-[#C69B45]/60 shadow-theme-elevated text-[#FFF9EF]"
+          data-aos="zoom-in">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-3">
+              <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#F6D379] font-bold">
+                ✦ Sacred Tithi &amp; Muhurta Dispatch
+              </span>
+              <h3 class="heading-serif text-3xl sm:text-4xl font-bold text-[#FFF9EF]">
+                Receive Monthly Vedic Panchangam Guides &amp; 10% First-Sanctum Privilege
+              </h3>
+              <p class="text-sm text-[#E8D8BF] max-w-xl">
+                Join 42,000+ devotees receiving Ekadashi, Pradosham, and festival pooja vidhi guides along with early
+                access to limited Swamimalai bronze castings.
+              </p>
+            </div>
+            <div class="lg:col-span-5">
+              <form data-newsletter-form class="space-y-2" novalidate>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <label for="h1-newsletter-email" class="sr-only">Email address</label>
+                  <input id="h1-newsletter-email" type="email" required placeholder="Enter your email address..."
+                    class="flex-1 rounded-full px-5 py-3.5 bg-[#FFF9EF] text-[#2B1D16] placeholder-[#6E5544] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#E99A36]" />
+                  <button type="submit" class="btn-sacred-gold whitespace-nowrap px-6 py-3.5 text-sm">Subscribe
+                    Now</button>
+                </div>
+                <span data-form-feedback class="text-xs text-[#E8D8BF] block">Zero spam. Only auspicious festival
+                  reminders &amp; artisan releases.</span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Reusable Premium Footer -->
+  <footer class="bg-[#1C120F] text-[#EAE0D2] pt-16 pb-10 border-t-2 border-[#C69B45]/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#C69B45]/25">
+        <!-- Col 1: Brand Logo & Introduction (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="w-12 h-12 shrink-0" role="img"
+              aria-label="DivyaKala Sacred Kalash Emblem">
+              <circle cx="60" cy="60" r="56" fill="#241114" stroke="#C69B45" stroke-width="3.5" />
+              <circle cx="60" cy="60" r="49" fill="none" stroke="#E99A36" stroke-width="1" stroke-dasharray="3 3"
+                opacity="0.75" />
+              <path d="M30 82 C30 50, 44 30, 60 20 C76 30, 90 50, 90 82" fill="none" stroke="#C69B45" stroke-width="2"
+                opacity="0.65" />
+              <path d="M60 96 C46 96, 34 88, 30 78 C40 78, 50 84, 60 90 C70 84, 80 78, 90 78 C86 88, 74 96, 60 96 Z"
+                fill="#C69B45" />
+              <path d="M36 70 Q60 84 84 70 L76 82 Q60 90 44 82 Z" fill="#E99A36" />
+              <path d="M60 25 C60 25, 45 45, 49 58 C52 66, 68 66, 71 58 C75 45, 60 25, 60 25 Z" fill="#E99A36"
+                stroke="#F6D379" stroke-width="1.2" />
+              <path d="M60 36 C60 36, 53 48, 55 56 C57 61, 63 61, 65 56 C67 48, 60 36, 60 36 Z" fill="#FFF9EF"
+                opacity="0.9" />
+              <circle cx="60" cy="15" r="2.5" fill="#F6D379" />
+            </svg>
+            <div>
+              <span class="heading-serif text-3xl font-bold text-[#FFF9EF] block leading-none">DivyaKala</span>
+              <span class="text-[10px] uppercase tracking-[0.22em] text-[#C69B45] font-semibold mt-1 block">Sacred Pooja
+                Emporium</span>
+            </div>
+          </a>
+          <p class="text-sm text-[#C4B097] leading-relaxed">
+            Preserving India’s sacred temple arts since 1984. We curate authentic Swamimalai bronze idols, Kumbakonam
+            brass lamps, Nepali Rudraksha, and pure Vedic samagri for discerning households worldwide.
+          </p>
+          <!-- Original Social Media Links with Interactive Brand Hover Effects -->
+          <div class="flex items-center gap-2.5 sm:gap-3 pt-2">
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              class="social-icon-btn group/social hover-instagram" aria-label="DivyaKala on Instagram"
+              title="Follow us on Instagram">
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover/social:scale-110" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+              class="social-icon-btn group/social hover-youtube" aria-label="DivyaKala on YouTube"
+              title="Watch on YouTube">
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover/social:scale-110" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              class="social-icon-btn group/social hover-facebook" aria-label="DivyaKala on Facebook"
+              title="Connect on Facebook">
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover/social:scale-110" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+
+            <!-- WhatsApp Concierge -->
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+              class="social-icon-btn group/social hover-whatsapp" aria-label="Chat with DivyaKala on WhatsApp"
+              title="WhatsApp Concierge">
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover/social:scale-110" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+            </a>
+
+            <!-- Email Concierge -->
+            <a href="pages/contact.html" class="social-icon-btn group/social hover-mail"
+              aria-label="Email DivyaKala Concierge" title="Send an Enquiry">
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover/social:scale-110" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="heading-serif text-xl font-bold text-[#FFF9EF] tracking-wide">Quick Links</h3>
+          <ul class="space-y-2 text-sm text-[#C4B097]">
+            <li><a href="index.html" class="hover:text-[#C69B45] transition">Home 1 (Emporium)</a></li>
+            <li><a href="pages/home-2.html" class="hover:text-[#C69B45] transition">Home 2 (Cinematic)</a></li>
+            <li><a href="pages/about.html" class="hover:text-[#C69B45] transition">About Our Lineage</a></li>
+            <li><a href="pages/products.html" class="hover:text-[#C69B45] transition">Complete Catalog</a></li>
+            <li><a href="pages/festival-calendar.html" class="hover:text-[#C69B45] transition">Festival Calendar</a>
+            </li>
+            <li><a href="pages/contact.html" class="hover:text-[#C69B45] transition">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Sacred Categories (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="heading-serif text-xl font-bold text-[#FFF9EF] tracking-wide">Sacred Categories</h3>
+          <ul class="space-y-2 text-sm text-[#C4B097]">
+            <li><a href="pages/products.html?category=pooja-kits" class="hover:text-[#C69B45] transition">Vedic
+                Sampoorna Pooja Kits</a></li>
+            <li><a href="pages/products.html?category=idols" class="hover:text-[#C69B45] transition">Swamimalai Brass
+                &amp; Bronze Idols</a></li>
+            <li><a href="pages/products.html?category=diyas" class="hover:text-[#C69B45] transition">Nilavilakku &amp;
+                Akhand Jyoti Diyas</a></li>
+            <li><a href="pages/products.html?category=pooja-thalis" class="hover:text-[#C69B45] transition">Nakshi
+                Engraved Pooja Thalis</a></li>
+            <li><a href="pages/products.html?category=rudraksha" class="hover:text-[#C69B45] transition">Certified
+                Nepali Rudraksha Malas</a></li>
+            <li><a href="pages/products.html?category=incense" class="hover:text-[#C69B45] transition">Temple Floral
+                Dhoop &amp; Sambrani</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Newsletter (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="heading-serif text-xl font-bold text-[#FFF9EF] tracking-wide">Sanctum Concierge</h3>
+          <ul class="space-y-2 text-xs text-[#C4B097]">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#C69B45] shrink-0 mt-0.5"></i>
+              <span>No. 48, Dashashwamedh Heritage Precinct, Varanasi – 221001 &amp; Sthapati Salai, Kumbakonam</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-[#C69B45] shrink-0"></i>
+              <a href="tel:+919840110808" class="hover:text-[#FFF9EF]">+91 98401 10808 (8 AM – 9 PM IST)</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-[#C69B45] shrink-0"></i>
+              <a href="mailto:seva@divyakala.in" class="hover:text-[#FFF9EF]">seva@divyakala.in</a>
+            </li>
+          </ul>
+
+          <form data-newsletter-form class="pt-2 space-y-2" novalidate>
+            <label for="footer-newsletter-h1"
+              class="text-xs font-semibold uppercase tracking-wider text-[#C69B45] block">Newsletter</label>
+            <div class="flex gap-2">
+              <input id="footer-newsletter-h1" type="email" required placeholder="Your email..."
+                class="w-full rounded-full px-3.5 py-2 text-xs bg-[#281C18] text-[#FFF9EF] border border-[#C69B45]/40 focus:outline-none focus:border-[#C69B45]" />
+              <button type="submit"
+                class="px-4 py-2 rounded-full bg-[#C69B45] text-[#1C120F] text-xs font-bold hover:bg-[#E99A36] transition">Join</button>
+            </div>
+            <span data-form-feedback class="text-[11px] text-[#C4B097] block"></span>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Legal Links -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C4B097]">
+        <p>© 2026 DivyaKala Sacred Heritage Emporium. All Rights Reserved. Crafted with Devotion.</p>
+        <div class="flex flex-wrap items-center gap-5">
+          <a href="pages/contact.html#faq-section" class="hover:text-[#FFF9EF] transition">Privacy Policy</a>
+          <a href="pages/contact.html#faq-section" class="hover:text-[#FFF9EF] transition">Terms of Seva</a>
+          <a href="pages/contact.html#faq-section" class="hover:text-[#FFF9EF] transition">Authenticity Guarantee</a>
+          <a href="pages/404.html" class="hover:text-[#FFF9EF] transition">404 Utility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top Floating Button (Right Corner of Footer) -->
+  <!-- Back-to-Top Floating Button (Right Corner of Footer) -->
+  <button type="button" id="dk-back-to-top"
+    class="hidden fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#702B32] text-[#FFF9EF] border-2 border-[#C69B45] shadow-2xl items-center justify-center hover:bg-[#8D3841] hover:scale-110 transition-all duration-300 focus:outline-none"
+    aria-label="Back to top" title="Back to Top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Lucide Icons & AOS Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

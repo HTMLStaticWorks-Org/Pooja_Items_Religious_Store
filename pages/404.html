@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Sacred Path Not Found — DivyaKala Pooja Emporium</title>
+  <meta name="description" content="The sacred page you were looking for could not be found. Return to DivyaKala Home 1 or browse our complete religious products catalog." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('divyakala_theme') || 'light';
+        var d = localStorage.getItem('divyakala_dir') || 'ltr';
+        if (t === 'dark') document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#702B32] selection:text-[#FFF9EF]">
+
+  <!-- Shared Premium Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0" aria-label="DivyaKala Home 1">
+        <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Sacred Kalash Emblem" class="w-9 h-9 sm:w-11 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0" width="44" height="44" />
+        <div class="flex flex-col">
+          <span class="heading-serif text-xl sm:text-2xl font-bold tracking-tight text-theme-primary leading-tight">DivyaKala</span>
+          <span class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-brand-gold font-semibold">Sacred Pooja Emporium</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-6" aria-label="Primary Navigation">
+        <a href="../index.html" class="nav-link-sacred">Home 1</a>
+        <a href="home-2.html" class="nav-link-sacred">Home 2</a>
+        <a href="about.html" class="nav-link-sacred">About</a>
+        <a href="products.html" class="nav-link-sacred">Products</a>
+        <a href="festival-calendar.html" class="nav-link-sacred">Festival Calendar</a>
+        <a href="contact.html" class="nav-link-sacred">Contact</a>
+      </nav>
+
+      <!-- Header Utility & Action Icons (Desktop xl: 1280px+) -->
+      <div class="hidden xl:flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0" aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0" aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0" aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0" aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0" aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+
+        <!-- Primary Header CTA: Sign Up -->
+        <a href="signup.html" class="btn-sacred-primary text-xs px-4 py-2.5 whitespace-nowrap shrink-0">
+          <span>Sign Up</span>
+        </a>
+      </div>
+
+      <!-- Mobile, Tablet & 1024px Compact Header Controls -->
+      <div class="flex xl:hidden items-center gap-1.5 sm:gap-2.5 shrink-0">
+
+        <!-- Hamburger Menu Button: Active on 1024px, Tablet & Mobile -->
+        <button type="button" id="dk-mobile-menu-btn" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0" aria-label="Open navigation menu" aria-expanded="false" aria-controls="dk-mobile-menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile, Tablet & 1024px Responsive Navigation Drawer -->
+    <div id="dk-mobile-menu" class="hidden xl:hidden bg-theme-surface border-b border-theme-strong px-4 pt-3 pb-6 shadow-theme-elevated">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-theme">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Sacred Navigation &amp; Actions</span>
+        <button type="button" id="dk-mobile-menu-close" class="text-xs font-semibold text-theme-muted hover:text-theme-primary px-2 py-1">Close ✕</button>
+      </div>
+
+      <!-- EXACT ALIGNED UTILITY ICONS ROW (Search, Wishlist, Cart, Theme, RTL) -->
+      <div class="flex items-center justify-center sm:justify-start gap-2 sm:gap-2.5 py-3 px-3 rounded-2xl bg-theme-secondary border border-theme mb-4 overflow-x-auto">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm" aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm" aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm" aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm" aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0 shadow-sm" aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links List -->
+      <nav class="flex flex-col space-y-2" aria-label="Mobile Navigation">
+        <a href="../index.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 1</a>
+        <a href="home-2.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 2</a>
+        <a href="about.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">About</a>
+        <a href="products.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Products</a>
+        <a href="festival-calendar.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Festival Calendar</a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Contact</a>
+        <div class="pt-3 border-t border-theme">
+          <a href="signup.html" class="btn-sacred-primary text-xs py-2.5 text-center w-full">Sign Up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16 sm:py-24">
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="sacred-card overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center">
+        <div class="lg:col-span-5 img-zoom-wrap h-72 lg:h-full">
+          <img src="../assets/images/util-404-lamp.webp" alt="Sacred Akhand Jyoti Lamp Guiding the Path Home" class="w-full h-full object-cover" width="900" height="750" />
+        </div>
+        <div class="lg:col-span-7 p-8 sm:p-12 space-y-5">
+          <span class="sacred-pill">Error 404 • Path Unilluminated</span>
+          <h1 class="heading-serif text-4xl sm:text-5xl font-bold text-theme-primary">
+            Let the Sacred Jyoti Guide You Back to the Sanctum
+          </h1>
+          <p class="text-sm sm:text-base text-theme-secondary leading-relaxed">
+            The corridor or offering you sought may have been moved or renamed. Return to our primary emporium or explore our curated categories below.
+          </p>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <a href="../index.html" class="btn-sacred-primary w-full sm:w-56 text-center justify-center py-3.5">Return to Home 1</a>
+            <a href="products.html" class="btn-sacred-outline w-full sm:w-56 text-center justify-center py-3.5">Browse Sacred Catalog</a>
+            <button type="button" data-open-search class="btn-sacred-outline w-full sm:w-56 text-center justify-center py-3.5">Search Offerings</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#1C120F] text-[#EAE0D2] py-10 border-t-2 border-[#C69B45]/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C4B097]">
+      <p>© 2026 DivyaKala Sacred Heritage Emporium. All Rights Reserved.</p>
+      <div class="flex flex-wrap gap-5">
+        <a href="../index.html" class="hover:text-[#FFF9EF]">Home 1</a>
+        <a href="home-2.html" class="hover:text-[#FFF9EF]">Home 2</a>
+        <a href="products.html" class="hover:text-[#FFF9EF]">Products</a>
+        <a href="festival-calendar.html" class="hover:text-[#FFF9EF]">Festival Calendar</a>
+        <a href="contact.html" class="hover:text-[#FFF9EF]">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <!-- Back-to-Top Floating Button (Right Corner of Footer) -->
+  <button type="button" id="dk-back-to-top" class="hidden fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#702B32] text-[#FFF9EF] border-2 border-[#C69B45] shadow-2xl items-center justify-center hover:bg-[#8D3841] hover:scale-110 transition-all duration-300 focus:outline-none" aria-label="Back to top" title="Back to Top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+</body>
+</html>
+
