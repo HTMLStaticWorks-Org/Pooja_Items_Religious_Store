@@ -210,6 +210,35 @@
         </div>
 
         <div class="space-y-1 pt-1">
+          <!-- Theme Toggle inside Sidebar Navigation -->
+          <button type="button" data-theme-toggle
+            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-theme-secondary hover:text-theme-primary hover:bg-theme-secondary transition"
+            aria-label="Toggle visual theme">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="sun" class="w-4 h-4 hidden theme-icon-sun text-[#E99A36]"></i>
+              <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+              <span class="theme-toggle-label">Theme Mode</span>
+            </div>
+            <span class="text-[10px] text-theme-muted font-mono">Light / Dark</span>
+          </button>
+
+          <!-- RTL Direction Toggle inside Sidebar Navigation -->
+          <button type="button" data-rtl-toggle
+            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-theme-secondary hover:text-theme-primary hover:bg-theme-secondary transition"
+            aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-brand-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m16 3 4 4-4 4"></path>
+                <path d="M20 7H4"></path>
+                <path d="m8 21-4-4 4-4"></path>
+                <path d="M4 17h16"></path>
+              </svg>
+              <span>Text Direction</span>
+            </div>
+            <span class="text-[10px] text-theme-muted font-mono" data-rtl-label>RTL</span>
+          </button>
+
           <!-- Sign Out -->
           <a href="../index.html"
             class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-rose-600 hover:text-rose-500 hover:bg-rose-500/10 transition">
@@ -239,27 +268,6 @@
         </div>
 
         <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
-          <!-- Theme Toggle Button (Desktop only; mobile top bar already contains it) -->
-          <button type="button" data-theme-toggle
-            class="hidden lg:flex w-9 h-9 rounded-full border border-theme bg-theme-surface items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-xs"
-            aria-label="Toggle visual theme" title="Toggle theme">
-            <i data-lucide="sun" class="w-4 h-4 hidden theme-icon-sun text-[#E99A36]"></i>
-            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
-          </button>
-
-          <!-- RTL Direction Toggle Button (Desktop only; mobile top bar already contains it) -->
-          <button type="button" data-rtl-toggle
-            class="hidden lg:flex w-9 h-9 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition items-center justify-center shrink-0 shadow-xs"
-            aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="m16 3 4 4-4 4"></path>
-              <path d="M20 7H4"></path>
-              <path d="m8 21-4-4 4-4"></path>
-              <path d="M4 17h16"></path>
-            </svg>
-          </button>
-
           <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#C69B45]/15 text-brand-gold border border-brand-gold/30">
             Bharadwaja Gotra
           </span>
