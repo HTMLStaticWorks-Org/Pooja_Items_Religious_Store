@@ -228,24 +228,27 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--bg-glass);
+  background-color: var(--bg-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
   transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background-color: var(--bg-header-scrolled);
+  background-color: var(--bg-surface);
   box-shadow: var(--shadow-soft);
 }
 
 .nav-link-sacred {
   position: relative;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-primary);
-  padding: 0.45rem 0.2rem;
+  padding: 0.45rem 0.25rem;
   transition: color 0.25s ease;
   text-decoration: none;
+  white-space: nowrap !important;
 }
 
 .nav-link-sacred::after {
