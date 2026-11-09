@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sacred Services, Vedic Rituals &amp; Custom Sthapati Craft — DivyaKala Emporium</title>
+  <meta name="description"
+    content="Book certified Vedic Purohit & Havan services, custom Swamimalai deity idol casting, home mandir Vastu design, bespoke wedding Tamboola gifts, and authentic Rudraksha consultations." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+
+  <!-- Early Theme & RTL Sync -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('divyakala_theme') || 'light';
+        var d = localStorage.getItem('divyakala_dir') || 'ltr';
+        if (t === 'dark') document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d);
+      } catch (e) { }
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FFF9EF',
+            templeGold: '#C69B45',
+            deepMaroon: '#702B32',
+            saffron: '#E99A36',
+            sandalwood: '#E8D8BF',
+            deepBrown: '#49362A'
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body class="bg-theme-primary text-theme-primary antialiased selection:bg-[#702B32] selection:text-[#FFF9EF]">
+  <!-- Skip Link for Keyboard Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to sacred services content</a>
+
+  <!-- ========================================================================
+       TOP UTILITY STRIP & PRIMARY SITE HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      <!-- Brand Logo (Clickable to Home 1) -->
+      <a href="../index.html" class="flex items-center gap-3 group shrink-0 focus:outline-none"
+        aria-label="DivyaKala Home 1">
+        <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Sacred Kalash Emblem"
+          class="w-9 h-9 sm:w-11 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
+          width="44" height="44" />
+        <div class="flex flex-col">
+          <span
+            class="heading-serif text-xl sm:text-2xl font-bold tracking-tight text-theme-primary leading-tight">DivyaKala</span>
+          <span
+            class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-brand-gold font-semibold">Sacred
+            Pooja Emporium</span>
+        </div>
+      </a>
+
+      <!-- Desktop Primary Navigation -->
+      <nav class="hidden xl:flex items-center gap-6" aria-label="Primary Navigation">
+        <a href="../index.html" class="nav-link-sacred">Home 1</a>
+        <a href="home-2.html" class="nav-link-sacred">Home 2</a>
+        <a href="about.html" class="nav-link-sacred">About</a>
+        <a href="products.html" class="nav-link-sacred">Products</a>
+        <a href="services.html" class="nav-link-sacred active" aria-current="page">Services</a>
+        <a href="festival-calendar.html" class="nav-link-sacred">Festival Calendar</a>
+        <a href="contact.html" class="nav-link-sacred">Contact</a>
+      </nav>
+
+      <!-- Header Utility & Action Icons (Desktop xl: 1280px+) -->
+      <div class="hidden xl:flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Patron Dashboard Trigger -->
+        <a href="dashboard.html"
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Patron Dashboard" title="Patron Dashboard & Orders">
+          <i data-lucide="user" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0"
+          aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+
+        <!-- Primary Header CTA: Sign Up -->
+        <a href="signup.html" class="btn-sacred-primary text-xs px-4 py-2.5 whitespace-nowrap shrink-0">
+          <span>Sign Up</span>
+        </a>
+      </div>
+
+      <!-- Mobile / Tablet (Below 1280px) Hamburger Trigger -->
+      <div class="flex xl:hidden items-center gap-1.5 sm:gap-2.5 shrink-0">
+        <!-- Hamburger Menu Button -->
+        <button type="button" id="dk-mobile-menu-btn"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="dk-mobile-menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile, Tablet & Responsive Navigation Drawer -->
+    <div id="dk-mobile-menu"
+      class="hidden xl:hidden bg-theme-surface border-b border-theme-strong px-4 pt-3 pb-6 shadow-theme-elevated">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-theme">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Sacred Navigation &amp; Actions</span>
+        <button type="button" id="dk-mobile-menu-close"
+          class="text-xs font-semibold text-theme-muted hover:text-theme-primary px-2 py-1">Close ✕</button>
+      </div>
+
+      <!-- EXACT ALIGNED UTILITY ICONS ROW (Search, Wishlist, Cart, Theme, RTL) -->
+      <div
+        class="flex items-center justify-center sm:justify-start gap-2 sm:gap-2.5 py-3 px-3 rounded-2xl bg-theme-secondary border border-theme mb-4 overflow-x-auto">
+        <!-- Search Trigger -->
+        <button type="button" data-open-search
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Search sacred products" title="Search Products">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button type="button" data-open-wishlist
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Open wishlist" title="Saved Wishlist">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span data-wishlist-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" data-open-cart
+          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Open shopping bag" title="Sacred Shopping Bag">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span data-cart-count
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button type="button" data-theme-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
+          aria-label="Toggle color theme" title="Switch Light/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        </button>
+
+        <!-- RTL / LTR Direction Toggle -->
+        <button type="button" data-rtl-toggle
+          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0 shadow-sm"
+          aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 3 4 4-4 4"></path>
+            <path d="M20 7H4"></path>
+            <path d="m8 21-4-4 4-4"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links List -->
+      <nav class="flex flex-col space-y-2" aria-label="Mobile Navigation">
+        <a href="../index.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 1</a>
+        <a href="home-2.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 2</a>
+        <a href="about.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">About</a>
+        <a href="products.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Products</a>
+        <a href="services.html"
+          class="px-3 py-2.5 rounded-xl bg-[#702B32] text-[#FFF9EF] font-semibold text-sm">Services</a>
+        <a href="festival-calendar.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Festival Calendar</a>
+        <a href="contact.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Contact</a>
+        <a href="dashboard.html"
+          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm flex items-center justify-between">
+          <span>Patron Dashboard</span>
+          <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#C69B45]/20 text-brand-gold border border-brand-gold/30">Account</span>
+        </a>
+        <div class="pt-3 border-t border-theme">
+          <a href="signup.html" class="btn-sacred-primary text-xs py-2.5 text-center w-full">Sign Up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: 5 DISTINCT SACRED SERVICES SECTIONS
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 1: HERO SECTION (Sacred Services Overview & Consultation CTA)
+         ---------------------------------------------------------------------- -->
+    <section id="services-hero" class="relative overflow-hidden py-14 sm:py-20 lg:py-24 bg-gradient-to-b from-[var(--bg-secondary)] via-[var(--bg-primary)] to-[var(--bg-primary)] border-b border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-xs text-theme-muted flex-wrap">
+            <li><a href="../index.html" class="hover:text-brand-gold transition">Home</a></li>
+            <li aria-hidden="true">•</li>
+            <li class="text-brand-gold font-semibold" aria-current="page">Services &amp; Sacred Seva Desk</li>
+          </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Left Column: Copy & CTAs -->
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+            <span class="sacred-pill">✦ Vedic Rituals &amp; Sanctum Services • 108+ Certified Scholars</span>
+            <h1 class="heading-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-theme-primary leading-tight">
+              Authentic Vedic Rituals, <span class="text-brand-gold italic">Deity Casting</span> &amp; Sacred Consultations
+            </h1>
+            <p class="text-sm sm:text-base text-theme-secondary leading-relaxed max-w-2xl">
+              From certified Griha Pravesh &amp; Navagraha Havans conducted by hereditary scholars to lost-wax Panchaloha casting, Home Mandir Vastu planning, and bespoke wedding Tamboola gifts—experience sacred traditions performed in strict adherence to Vedic Shastras.
+            </p>
+
+            <!-- Dual Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <a href="#services-booking" class="btn-sacred-primary flex-1 min-w-[210px] max-w-[260px] w-full sm:w-auto text-center justify-center text-xs sm:text-sm py-3.5 shadow-theme-elevated">
+                <span>Book a Sacred Consultation</span>
+              </a>
+              <a href="#services-catalog" class="btn-sacred-outline flex-1 min-w-[190px] max-w-[240px] w-full sm:w-auto text-center justify-center text-xs sm:text-sm py-3.5">
+                <span>Explore All 6 Services</span>
+              </a>
+            </div>
+
+            <!-- Accreditation & Trust Strip -->
+            <div class="pt-6 border-t border-theme/70 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+              <div>
+                <span class="block text-xl sm:text-2xl font-bold text-brand-gold heading-serif">108+</span>
+                <span class="text-[11px] sm:text-xs text-theme-muted uppercase tracking-wider font-semibold">Agama Scholars</span>
+              </div>
+              <div>
+                <span class="block text-xl sm:text-2xl font-bold text-brand-gold heading-serif">100%</span>
+                <span class="text-[11px] sm:text-xs text-theme-muted uppercase tracking-wider font-semibold">Shastra Pure</span>
+              </div>
+              <div>
+                <span class="block text-xl sm:text-2xl font-bold text-brand-gold heading-serif">1,850+</span>
+                <span class="text-[11px] sm:text-xs text-theme-muted uppercase tracking-wider font-semibold">Havans Done</span>
+              </div>
+              <div>
+                <span class="block text-xl sm:text-2xl font-bold text-brand-gold heading-serif">4.98★</span>
+                <span class="text-[11px] sm:text-xs text-theme-muted uppercase tracking-wider font-semibold">Patron Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Sanctum Visual Frame -->
+          <div class="lg:col-span-5" data-aos="fade-left">
+            <div class="lotus-curve-frame shadow-theme-elevated bg-theme-surface relative group">
+              <img src="../assets/images/contact-atelier.webp" alt="Traditional Vedic havan fire ceremony with brass ladles and pure herbs"
+                class="w-full h-80 sm:h-96 lg:h-[440px] object-cover transition-transform duration-700 group-hover:scale-105"
+                width="850" height="950" loading="eager" />
+              <!-- Floating Sanctum Tag -->
+              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-black/60 backdrop-blur-md border border-white/20 text-[#FFF9EF] flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase tracking-widest text-[#E99A36] font-bold block">Sanctum Guarantee</span>
+                  <span class="text-xs font-semibold">Vedic Scholars • Pure Samagri Included</span>
+                </div>
+                <span class="w-8 h-8 rounded-full bg-[#C69B45] text-[#1F140E] flex items-center justify-center font-bold text-sm">✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 2: 6 SIGNATURE SACRED SERVICES CATALOG
+         ---------------------------------------------------------------------- -->
+    <section id="services-catalog" class="py-16 sm:py-24 bg-theme-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Title & Subtitle -->
+        <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+          <span class="sacred-pill">Pancha-Karma &amp; Shilpa Shastra Portfolio</span>
+          <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">
+            Our 6 Sacred Ceremonial Offerings
+          </h2>
+          <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed">
+            Every service is meticulously tailored to your family gotra, nakshatra, and ancestral traditions—delivered either directly at your home altar or via high-definition consecrated live streaming.
+          </p>
+        </div>
+
+        <!-- 6 Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          
+          <!-- Service Card 1 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="50">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/h1-sacred-arati.webp" alt="Vedic Purohit conducting sacred havan arati"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#702B32] text-[#FFF9EF]">
+                Rituals &amp; Havans
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Home &amp; Mandir Sanctification</span>
+                  <span>4.9★ (380+ Sevas)</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Vedic Purohit &amp; Havan Seva
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Certified priests for Griha Pravesh, Satyanarayan Katha, Navagraha Shanti, Rudrabhishek, and Ayushya Homam. Includes complete consecrated samagri box and auspicious Muhurta selection.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Available in Sanskrit, Hindi, Tamil, Telugu, Kannada</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Pure cow ghee, herbs, and Ganga jal provided</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Honorarium</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">From ₹5,100</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='purohit-havan'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Book Purohit</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Card 2 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="100">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/about-hero-craft.webp" alt="Master Sthapati carving bronze deity murti"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#C69B45] text-[#1F140E]">
+                Lost-Wax Foundry
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Swamimalai Shilpa Guild</span>
+                  <span>Agama Shastra Certified</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Custom Deity Idol Casting
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Bespoke Panchaloha, solid brass, and Kumbakonam bronze vigrahas cast to your mandir’s exact Mana-Pramana (canonical proportions). Includes X-ray metallurgy purity certification.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Heights from 6 inches to 5 feet life-size vigrahas</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Weekly foundry photo updates during casting</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Commission</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">By Dimension</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='custom-idol'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Commission Murti</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Card 3 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="150">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/fcal-hero-mandir.webp" alt="Vedic home mandir architecture and brass lamp setup"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#702B32] text-[#FFF9EF]">
+                Sanctum Architecture
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Directional Energy Vastu</span>
+                  <span>100% Teak / Rosewood</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Home Mandir Vastu Design
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Architectural consulting for home altars: Ishanya (Northeast) alignment, sacred geometry proportions, proper deepa and kalash placement, and custom teakwood mandapam construction.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Virtual video call or on-site home inspection</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Complete 3D altar plan and brassware placement</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Blueprint Seva</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">From ₹2,500</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='mandir-vastu'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Plan Mandir</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Card 4 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="200">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/prod-offer-wedding.webp" alt="Wedding Tamboola return gift boxes with brass diyas"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#C69B45] text-[#1F140E]">
+                Wedding &amp; Bulk
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Vivah, Upanayanam &amp; Seemantham</span>
+                  <span>Custom Monogramming</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Bespoke Tamboola Return Gifting
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Celebrate auspicious milestones with customized return gift sets: family-monogrammed brass diyas, silver-plated haldi-kumkum karandas, silk potlis with energized samagri, and sweet prasadam.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Laser engraving of bride &amp; groom family crest</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Delivered in velvet-lined boxes with blessing scroll</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Bulk Pricing</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">From ₹299 / Box</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='wedding-tamboola'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Get Bulk Quote</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Card 5 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="250">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/h1-cat-rudraksha.webp" alt="Authentic Nepali Rudraksha beads with astrological chart"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#702B32] text-[#FFF9EF]">
+                Astrological Vedic
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Horoscope &amp; Dosha Mapping</span>
+                  <span>X-Ray Tested Seeds</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Rudraksha &amp; Gem Consultation
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Personal 1-on-1 consultation with Vedic Jyotish pandits to determine the exact 1–14 Mukhi Nepali Rudraksha or Navaratna gemstone suited to your Janma Kundali and planetary dasha cycles.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Individual X-ray internal compartment certificate</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Prana Pratishtha consecration mantras included</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Astrology Desk</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">₹1,100 (Credited)</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='rudraksha-gem'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Book Astrology</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Card 6 -->
+          <article class="sacred-card group flex flex-col h-full overflow-hidden shadow-theme-card transition-all duration-300 hover:-translate-y-1.5" data-aos="fade-up" data-aos-delay="300">
+            <div class="img-zoom-wrap h-60 w-full shrink-0 relative">
+              <img src="../assets/images/about-milestone-foundry.webp" alt="Restoration of antique brass temple bell and lamps"
+                class="w-full h-full object-cover" width="850" height="700" loading="lazy" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-[#C69B45] text-[#1F140E]">
+                Conservation Guild
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between text-xs text-brand-gold font-semibold mb-1">
+                  <span>Heirloom Preservation</span>
+                  <span>Non-Toxic Chemical-Free</span>
+                </div>
+                <h3 class="heading-serif text-2xl font-bold text-theme-primary group-hover:text-brand-gold transition leading-snug">
+                  Temple Brass &amp; Idol Restoration
+                </h3>
+                <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+                  Preserve ancestral worship artifacts with traditional herbal restoration: chemical-free tarnish removal, acoustic bell tuning, gold leaf re-gilding, and repairing ancient Panchaloha murtis.
+                </p>
+                <ul class="mt-4 space-y-2 text-xs text-theme-muted border-t border-theme/60 pt-3">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Tamarind, reetha, and sacred ash herbal cleansing</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-gold">✓</span>
+                    <span>Insured secure door-to-door courier transit</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] text-theme-muted uppercase tracking-wider block">Restoration</span>
+                  <span class="heading-serif text-lg font-bold text-brand-gold">Custom Estimate</span>
+                </div>
+                <a href="#services-booking" onclick="document.getElementById('service-select').value='temple-restoration'"
+                  class="btn-sacred-primary text-xs px-4 py-2 text-center whitespace-nowrap">
+                  <span>Restore Artifact</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 3: THE 4-STEP SEVA PROCESS & STANDARDS
+         ---------------------------------------------------------------------- -->
+    <section id="services-process" class="py-16 sm:py-24 bg-theme-secondary border-y border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+          <span class="sacred-pill">Krama &amp; Vidhi Protocol</span>
+          <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-3">
+            Our 4-Stage Sacred Seva Protocol
+          </h2>
+          <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed">
+            Unlike commercial event planners, every DivyaKala ritual and artisan commission follows rigorous Agama scriptural checkpoints to protect spiritual efficacy.
+          </p>
+        </div>
+
+        <!-- 4 Step Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          <!-- Step 1 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4 border-t-4 border-t-brand-gold" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-brand-gold/60 block">01</span>
+              <h3 class="heading-serif text-xl font-bold text-theme-primary mt-2">Shastra Discovery &amp; Muhurta Selection</h3>
+              <p class="text-xs text-theme-secondary mt-2 leading-relaxed">
+                We review your family gotra, birth nakshatra, and occasion to identify the astrologically auspicious Muhurta verified across classical panchangams.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-theme/60 text-[11px] text-theme-muted font-semibold flex items-center gap-1.5">
+              <span class="text-brand-gold">●</span>
+              <span>1-on-1 Scholar Call</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4 border-t-4 border-t-brand-maroon" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-brand-maroon/80 block">02</span>
+              <h3 class="heading-serif text-xl font-bold text-theme-primary mt-2">Artisanal Samagri Curation</h3>
+              <p class="text-xs text-theme-secondary mt-2 leading-relaxed">
+                Hand-harvested wood, unadulterated cow ghee, Kashi Ganga water, and certified temple brassware are bundled into an all-inclusive ritual box.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-theme/60 text-[11px] text-theme-muted font-semibold flex items-center gap-1.5">
+              <span class="text-brand-maroon">●</span>
+              <span>Pancha-Shuddhi Tested</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4 border-t-4 border-t-brand-gold" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-brand-gold/60 block">03</span>
+              <h3 class="heading-serif text-xl font-bold text-theme-primary mt-2">Auspicious Execution (Home / Live)</h3>
+              <p class="text-xs text-theme-secondary mt-2 leading-relaxed">
+                Conducted with strict phonetic Vedic chanting by certified Purohits at your residence, or via high-definition multi-camera live interactive broadcast.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-theme/60 text-[11px] text-theme-muted font-semibold flex items-center gap-1.5">
+              <span class="text-brand-gold">●</span>
+              <span>Full Family Sankalpa</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4 border-t-4 border-t-brand-maroon" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-brand-maroon/80 block">04</span>
+              <h3 class="heading-serif text-xl font-bold text-theme-primary mt-2">Prasadam &amp; Sanctum Blessings</h3>
+              <p class="text-xs text-theme-secondary mt-2 leading-relaxed">
+                Receive the consecrated Havan Bhasma, energized yantras, sanctified Raksha threads, and temple dry fruit prasadam delivered to your doorstep.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-theme/60 text-[11px] text-theme-muted font-semibold flex items-center gap-1.5">
+              <span class="text-brand-maroon">●</span>
+              <span>Doorstep Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 4: INTERACTIVE SERVICE BOOKING & CONSULTATION DESK
+         ---------------------------------------------------------------------- -->
+    <section id="services-booking" class="py-16 sm:py-24 bg-theme-primary">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="sacred-card p-6 sm:p-10 lg:p-12 shadow-theme-elevated" data-aos="fade-up">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="sacred-pill">Direct Seva Scheduling &amp; Inquiry</span>
+            <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-theme-primary mt-3">
+              Request a Sacred Consultation
+            </h2>
+            <p class="text-xs sm:text-sm text-theme-secondary mt-2 leading-relaxed">
+              Fill out your ritual preferences below. Our head Acharya or Master Sthapati will review your requirements and reach out within 2 hours.
+            </p>
+          </div>
+
+          <form id="service-inquiry-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Full Name -->
+              <div>
+                <label for="patron-name" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Patron Name *
+                </label>
+                <input type="text" id="patron-name" required placeholder="e.g. Sri Rajesh Sharma"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
+              </div>
+
+              <!-- Phone & WhatsApp -->
+              <div>
+                <label for="patron-phone" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Phone / WhatsApp Number *
+                </label>
+                <input type="tel" id="patron-phone" required placeholder="+91 98401 10808"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Email Address -->
+              <div>
+                <label for="patron-email" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Email Address *
+                </label>
+                <input type="email" id="patron-email" required placeholder="rajesh@example.com"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
+              </div>
+
+              <!-- Service Type Selector -->
+              <div>
+                <label for="service-select" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Select Sacred Service *
+                </label>
+                <select id="service-select" required
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none cursor-pointer">
+                  <option value="" disabled selected>Choose a Service Offering...</option>
+                  <option value="purohit-havan">Vedic Purohit &amp; Havan Seva (Griha Pravesh / Puja)</option>
+                  <option value="custom-idol">Custom Sthapati Deity Idol Casting (Panchaloha / Bronze)</option>
+                  <option value="mandir-vastu">Home Mandir &amp; Sanctum Vastu Architecture</option>
+                  <option value="wedding-tamboola">Bespoke Wedding &amp; Event Tamboola Gifting (25+ sets)</option>
+                  <option value="rudraksha-gem">Rudraksha &amp; Gem Astrological Reading (Kundali)</option>
+                  <option value="temple-restoration">Temple Brassware &amp; Murti Restoration</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <!-- Preferred Date -->
+              <div>
+                <label for="service-date" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Target Muhurta / Date
+                </label>
+                <input type="date" id="service-date"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
+              </div>
+
+              <!-- Location Type -->
+              <div>
+                <label for="service-mode" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Service Execution Mode
+                </label>
+                <select id="service-mode"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none cursor-pointer">
+                  <option value="home-visit">On-Site at My Home / Mandir</option>
+                  <option value="live-video">High-Definition Interactive Digital Stream</option>
+                  <option value="workshop-courier">Custom Craft Shipped to Doorstep</option>
+                </select>
+              </div>
+
+              <!-- Language Preference -->
+              <div>
+                <label for="service-lang" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                  Priest Language
+                </label>
+                <select id="service-lang"
+                  class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none cursor-pointer">
+                  <option value="sanskrit-hindi">Sanskrit &amp; Hindi</option>
+                  <option value="sanskrit-tamil">Sanskrit &amp; Tamil</option>
+                  <option value="sanskrit-telugu">Sanskrit &amp; Telugu</option>
+                  <option value="sanskrit-kannada">Sanskrit &amp; Kannada</option>
+                  <option value="sanskrit-english">Sanskrit &amp; English Guidance</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ritual Details & Notes -->
+            <div>
+              <label for="service-notes" class="block text-xs font-semibold uppercase tracking-wider text-theme-secondary mb-1.5">
+                Family Gotra, Occasion or Custom Specifications
+              </label>
+              <textarea id="service-notes" rows="4" placeholder="Mention occasion details (e.g. Griha Pravesh on Karthik Purnima, required deity idol dimensions, number of wedding guests, or specific family gotra sankalpa)..."
+                class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none"></textarea>
+            </div>
+
+            <!-- Submit Buttons & WhatsApp Quick Action -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-theme/60">
+              <button type="submit" class="btn-sacred-primary text-sm px-8 py-3.5 w-full sm:w-auto text-center justify-center shadow-theme-elevated">
+                <span>Submit Sacred Request</span>
+              </button>
+
+              <a href="https://wa.me/919840110808?text=Namaste%20DivyaKala%20team,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20sacred%20Vedic%20service."
+                target="_blank" rel="noopener noreferrer"
+                class="btn-sacred-outline text-xs sm:text-sm px-6 py-3 w-full sm:w-auto text-center justify-center flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4 text-[#25D366]"></i>
+                <span>Instant WhatsApp Concierge</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 5: PATRON TESTIMONIALS, SACRED FAQ & AUSPICIOUS BANNER
+         ---------------------------------------------------------------------- -->
+    <section id="services-faq" class="py-16 sm:py-24 bg-theme-secondary border-t border-theme">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Patron Seva Reviews -->
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+          <span class="sacred-pill">Real Patron Experiences</span>
+          <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-theme-primary mt-3">
+            Blessings From Devoted Households
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
+          <!-- Review 1 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <div class="flex text-[#E99A36] text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-theme-secondary italic leading-relaxed">
+                "Our Griha Pravesh in Whitefield was conducted with exceptional sanctity. The pandit ji arrived on time with the complete samagri box, leaving no stress for our family. Every mantra was translated with reverence."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-theme/60 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#702B32] text-[#FFF9EF] font-bold flex items-center justify-center text-xs">RS</div>
+              <div>
+                <span class="text-xs font-bold text-theme-primary block">Raghav &amp; Sunita V.</span>
+                <span class="text-[11px] text-theme-muted">Bengaluru • Griha Pravesh Havan</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <div class="flex text-[#E99A36] text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-theme-secondary italic leading-relaxed">
+                "We commissioned a 15-inch Swamimalai bronze Nataraja for our home temple. The weekly foundry progress photos and final X-ray purity certificate gave our entire family immense peace of mind."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-theme/60 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#C69B45] text-[#1F140E] font-bold flex items-center justify-center text-xs">AK</div>
+              <div>
+                <span class="text-xs font-bold text-theme-primary block">Dr. Arvind Krishna</span>
+                <span class="text-[11px] text-theme-muted">London, UK • Custom Bronze Murti</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="sacred-card p-6 sm:p-7 flex flex-col justify-between space-y-4" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <div class="flex text-[#E99A36] text-sm mb-2">★★★★★</div>
+              <p class="text-xs sm:text-sm text-theme-secondary italic leading-relaxed">
+                "For our daughter’s wedding, DivyaKala delivered 250 monogrammed brass diyas in exquisite velvet gift boxes. Guests called us weeks later praising the divine heirloom quality."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-theme/60 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-[#702B32] text-[#FFF9EF] font-bold flex items-center justify-center text-xs">MN</div>
+              <div>
+                <span class="text-xs font-bold text-theme-primary block">Meenakshi Natarajan</span>
+                <span class="text-[11px] text-theme-muted">Chennai • 250 Tamboola Gift Sets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frequently Asked Questions Accordion -->
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+          <div class="text-center mb-8">
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Clarifications</span>
+            <h3 class="heading-serif text-2xl sm:text-3xl font-bold text-theme-primary mt-1">
+              Frequently Asked Questions About Our Services
+            </h3>
+          </div>
+
+          <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <details class="group sacred-card p-5 rounded-2xl cursor-pointer">
+              <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-theme-primary list-none">
+                <span>How far in advance should we schedule a Purohit for Griha Pravesh?</span>
+                <span class="text-brand-gold transition-transform duration-300 group-open:rotate-180">▼</span>
+              </summary>
+              <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed border-t border-theme/60 pt-3">
+                We recommend booking at least 7 to 14 days in advance to allow our Acharyas to verify auspicious muhurtas and assemble fresh, personalized samagri. However, urgent requests for sudden muhurtas can be accommodated within 48 hours based on scholar availability.
+              </p>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group sacred-card p-5 rounded-2xl cursor-pointer">
+              <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-theme-primary list-none">
+                <span>Can families residing outside India participate via live digital stream?</span>
+                <span class="text-brand-gold transition-transform duration-300 group-open:rotate-180">▼</span>
+              </summary>
+              <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed border-t border-theme/60 pt-3">
+                Yes. We host live, interactive private video ceremonies from our consecrated temple atelier in Kumbakonam and Varanasi. Priests recite your family’s exact Gotra, Nakshatra, and Sankalpa, with two-way audio allowing you to chant along. The consecrated prasadam is vacuum-sealed and dispatched via express international courier.
+              </p>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group sacred-card p-5 rounded-2xl cursor-pointer">
+              <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-theme-primary list-none">
+                <span>What metallurgy standards are used in custom deity casting?</span>
+                <span class="text-brand-gold transition-transform duration-300 group-open:rotate-180">▼</span>
+              </summary>
+              <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed border-t border-theme/60 pt-3">
+                Our Sthapati guilds work strictly in accordance with Agama and Shilpa Shastras using virgin Panchaloha (copper, brass, lead-free zinc, silver, and gold trace) or solid bronze. Every idol undergoes non-destructive XRF spectrometry testing, and comes with a certified metal assay certificate.
+              </p>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group sacred-card p-5 rounded-2xl cursor-pointer">
+              <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-theme-primary list-none">
+                <span>Is all ritual samagri provided, or do we need to buy items locally?</span>
+                <span class="text-brand-gold transition-transform duration-300 group-open:rotate-180">▼</span>
+              </summary>
+              <p class="text-xs sm:text-sm text-theme-secondary mt-3 leading-relaxed border-t border-theme/60 pt-3">
+                Every Purohit booking includes our complete, sealed Sampoorna Samagri Kit containing all 32+ required sacred ingredients (organic herbs, dry fruits, unadulterated cow ghee, camphor, navadhanyam, and sacred threads). You only need to arrange fresh flowers and seasonal fruits.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Auspicious Banner CTA -->
+        <div class="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#241114] to-[#451B20] border-2 border-brand-gold/40 text-[#FFF9EF] shadow-theme-elevated relative overflow-hidden" data-aos="fade-up">
+          <div class="relative z-10 max-w-2xl space-y-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Auspicious Assistance</span>
+            <h3 class="heading-serif text-2xl sm:text-4xl font-bold">Begin Your Family’s Auspicious Ritual Journey</h3>
+            <p class="text-xs sm:text-sm text-[#EAE0D2] leading-relaxed">
+              Connect directly with our senior ritual concierge to plan your upcoming ceremony with peace of mind.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#services-booking" class="btn-sacred-primary text-xs sm:text-sm px-6 py-3">
+                <span>Request Consultation</span>
+              </a>
+              <a href="contact.html" class="btn-sacred-outline text-xs sm:text-sm px-6 py-3 text-[#FFF9EF] border-[#C69B45] hover:bg-[#C69B45]/20">
+                <span>Speak to Head Acharya</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       PRIMARY SITE FOOTER
+       ======================================================================== -->
+  <footer class="bg-[#1C120F] text-[#EAE0D2] pt-16 pb-10 border-t-2 border-[#C69B45]/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#C69B45]/25">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Emblem" class="w-10 h-10 object-contain" width="40" height="40" />
+            <div class="flex flex-col">
+              <span class="heading-serif text-2xl font-bold text-[#FFF9EF]">DivyaKala</span>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Sacred Pooja Emporium</span>
+            </div>
+          </a>
+          <p class="text-xs text-[#C5B7A5] leading-relaxed">
+            Preserving canonical Vedic craftsmanship since 1984. Revered source of Kumbakonam brass lamps, Swamimalai bronze vigrahas, and authentic pooja samagri.
+          </p>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group/social hover-instagram" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group/social hover-youtube" aria-label="YouTube">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group/social hover-facebook" aria-label="Facebook">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919840110808" target="_blank" rel="noopener noreferrer" class="social-icon-btn group/social hover-whatsapp" aria-label="WhatsApp">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Sacred Portals</span>
+          <ul class="space-y-2 text-xs">
+            <li><a href="../index.html" class="hover:text-brand-gold transition">Home 1</a></li>
+            <li><a href="home-2.html" class="hover:text-brand-gold transition">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-brand-gold transition">About Us</a></li>
+            <li><a href="products.html" class="hover:text-brand-gold transition">Products Catalog</a></li>
+            <li><a href="services.html" class="text-brand-gold font-semibold">Services &amp; Seva</a></li>
+            <li><a href="festival-calendar.html" class="hover:text-brand-gold transition">Festival Calendar</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Sacred Seva &amp; Account</span>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html#services-catalog" class="hover:text-brand-gold transition">Purohit &amp; Havan Seva</a></li>
+            <li><a href="services.html#services-catalog" class="hover:text-brand-gold transition">Custom Deity Casting</a></li>
+            <li><a href="services.html#services-catalog" class="hover:text-brand-gold transition">Home Mandir Vastu</a></li>
+            <li><a href="dashboard.html" class="hover:text-brand-gold transition">Patron Dashboard</a></li>
+            <li><a href="login.html" class="hover:text-brand-gold transition">Patron Sign In</a></li>
+            <li><a href="signup.html" class="hover:text-brand-gold transition">Create Account</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Sanctum Concierge</span>
+          <div class="space-y-2 text-xs text-[#C5B7A5]">
+            <p class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span>108 Dashashwamedh Ghat Road, Varanasi, UP 221001</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-gold shrink-0"></i>
+              <span>+91 98401 10808 (9 AM – 8 PM IST)</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
+              <span>seva@divyakala.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A89885]">
+        <p>© 2026 DivyaKala Sacred Pooja Emporium. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="contact.html" class="hover:text-brand-gold transition">Privacy &amp; Samagri Policy</a>
+          <span>•</span>
+          <a href="contact.html" class="hover:text-brand-gold transition">Terms of Worship</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal Container (Handled by main.js) -->
+  <div id="search-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-start justify-center pt-20 px-4">
+    <div class="sacred-card max-w-2xl w-full p-6 shadow-theme-elevated">
+      <div class="flex items-center justify-between pb-4 border-b border-theme">
+        <h3 class="heading-serif text-xl font-bold text-theme-primary">Search Sacred Offerings</h3>
+        <button type="button" data-close-search class="text-theme-muted hover:text-theme-primary text-xl">✕</button>
+      </div>
+      <div class="mt-4">
+        <input type="text" data-search-input placeholder="Search brass lamps, havan kits, vigrahas..."
+          class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
+      </div>
+      <div data-search-results class="mt-4 max-h-72 overflow-y-auto space-y-2"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer Container (Handled by main.js) -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-xs" data-close-cart></div>
+    <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-theme-surface border-l border-theme p-6 shadow-theme-elevated flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-theme">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-gold"></i>
+            <h3 class="heading-serif text-xl font-bold text-theme-primary">Sacred Shopping Bag</h3>
+          </div>
+          <button type="button" data-close-cart class="text-theme-muted hover:text-theme-primary text-xl">✕</button>
+        </div>
+        <div data-cart-items class="mt-4 divide-y divide-theme"></div>
+      </div>
+      <div class="pt-4 border-t border-theme space-y-3">
+        <div class="flex items-center justify-between text-sm">
+          <span class="text-theme-secondary">Total Offering:</span>
+          <span data-cart-total class="heading-serif font-bold text-brand-gold text-lg">₹0</span>
+        </div>
+        <a href="products.html" class="btn-sacred-primary text-xs py-3 text-center block w-full">Proceed to Sacred Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="dk-back-to-top"
+    class="hidden fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-11 h-11 rounded-full bg-brand-gold text-[#1F140E] shadow-theme-elevated flex items-center justify-center hover:scale-110 transition-transform"
+    aria-label="Back to top of page">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Lucide, AOS and Application Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+      if (typeof AOS !== 'undefined') AOS.init({ duration: 750, once: true });
+
+      // Service Inquiry Form Submission
+      var form = document.getElementById('service-inquiry-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = document.getElementById('patron-name').value;
+          var service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
+          alert('Pranaam, ' + name + '!\n\nYour sacred request for \"' + service + '\" has been received at our Seva Desk.\nOur Acharya will contact you within 2 hours.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

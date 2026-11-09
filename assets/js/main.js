@@ -1114,13 +1114,13 @@
           statusBox.className = 'p-3.5 rounded-2xl bg-[#702B32]/10 border border-[#C69B45] text-theme-primary text-xs font-semibold space-y-1';
           statusBox.innerHTML = `
             <p class="text-brand-gold font-bold">✦ Shubh Pravesh, ${username}!</p>
-            <p class="text-theme-secondary">You are signed in to your Patron Sanctum. Redirecting to offerings...</p>
+            <p class="text-theme-secondary">You are signed in to your Patron Sanctum. Redirecting to your dashboard...</p>
           `;
           statusBox.classList.remove('hidden');
         }
         showToast(`Welcome back, ${username}! Sanctum session active.`);
         setTimeout(() => {
-          window.location.href = isSubPage ? 'products.html' : 'pages/products.html';
+          window.location.href = isSubPage ? 'dashboard.html' : 'pages/dashboard.html';
         }, 1200);
       });
     }
@@ -1189,7 +1189,7 @@
         showToast(`Namaskaram ${nameEl.value.trim()}! Welcome to DivyaKala Patron Circle.`);
         signupForm.reset();
         setTimeout(() => {
-          window.location.href = isSubPage ? 'products.html' : 'pages/products.html';
+          window.location.href = isSubPage ? 'dashboard.html' : 'pages/dashboard.html';
         }, 1500);
       });
     }
