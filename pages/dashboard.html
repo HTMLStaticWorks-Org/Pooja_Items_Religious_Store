@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patron Dashboard &amp; Sacred Account — DivyaKala Emporium</title>
+  <title>Patron Sanctum Dashboard — DivyaKala Emporium</title>
   <meta name="description"
     content="Manage your DivyaKala patron account: view active orders, track consecrated brass shipments, scheduled Vedic purohit bookings, and saved family Gotra sankalpa." />
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
@@ -49,731 +49,600 @@
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to patron dashboard</a>
 
-  <!-- ========================================================================
-       TOP UTILITY STRIP & PRIMARY SITE HEADER
-       ======================================================================== -->
-  <header class="site-header" id="site-header">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
-      <!-- Brand Logo (Clickable to Home 1) -->
-      <a href="../index.html" class="flex items-center gap-3 group shrink-0 focus:outline-none"
-        aria-label="DivyaKala Home 1">
-        <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Sacred Kalash Emblem"
-          class="w-9 h-9 sm:w-11 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
-          width="44" height="44" />
+  <!-- Mobile Top Bar (< lg) -->
+  <header class="lg:hidden sticky top-0 z-40 bg-theme-surface/95 backdrop-blur-md border-b border-theme px-4 py-3 flex items-center justify-between shadow-xs">
+    <div class="flex items-center gap-3">
+      <button type="button" id="mobile-sidebar-toggle"
+        class="p-2 rounded-xl border border-theme bg-theme-secondary text-theme-primary hover:border-theme-strong focus:outline-none"
+        aria-label="Open sidebar menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Emblem" class="w-8 h-8 object-contain" width="32" height="32" />
         <div class="flex flex-col">
-          <span
-            class="heading-serif text-xl sm:text-2xl font-bold tracking-tight text-theme-primary leading-tight">DivyaKala</span>
-          <span
-            class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-brand-gold font-semibold">Sacred
-            Pooja Emporium</span>
+          <span class="heading-serif text-lg font-bold text-theme-primary leading-tight">DivyaKala</span>
+          <span class="text-[8px] uppercase tracking-wider text-brand-gold font-bold">Patron Sanctum</span>
         </div>
       </a>
-
-      <!-- Desktop Primary Navigation -->
-      <nav class="hidden xl:flex items-center gap-6" aria-label="Primary Navigation">
-        <a href="../index.html" class="nav-link-sacred">Home 1</a>
-        <a href="home-2.html" class="nav-link-sacred">Home 2</a>
-        <a href="about.html" class="nav-link-sacred">About</a>
-        <a href="products.html" class="nav-link-sacred">Products</a>
-        <a href="services.html" class="nav-link-sacred">Services</a>
-        <a href="festival-calendar.html" class="nav-link-sacred">Festival Calendar</a>
-        <a href="contact.html" class="nav-link-sacred">Contact</a>
-      </nav>
-
-      <!-- Header Utility & Action Icons (Desktop xl: 1280px+) -->
-      <div class="hidden xl:flex items-center gap-2 sm:gap-2.5 shrink-0">
-        <!-- Search Trigger -->
-        <button type="button" data-open-search
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
-          aria-label="Search sacred products" title="Search Products">
-          <i data-lucide="search" class="w-4 h-4"></i>
-        </button>
-
-        <!-- Wishlist Trigger -->
-        <button type="button" data-open-wishlist
-          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
-          aria-label="Open wishlist" title="Saved Wishlist">
-          <i data-lucide="heart" class="w-4 h-4"></i>
-          <span data-wishlist-count
-            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
-        </button>
-
-        <!-- Shopping Bag Trigger -->
-        <button type="button" data-open-cart
-          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
-          aria-label="Open shopping bag" title="Sacred Shopping Bag">
-          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-          <span data-cart-count
-            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
-        </button>
-
-        <!-- Patron Dashboard Active Trigger -->
-        <a href="dashboard.html"
-          class="w-10 h-10 rounded-full border border-brand-gold bg-[#C69B45]/15 flex items-center justify-center text-brand-gold transition shrink-0 shadow-sm"
-          aria-label="Patron Dashboard" title="Patron Dashboard (Active)">
-          <i data-lucide="user" class="w-4 h-4"></i>
-        </a>
-
-        <!-- Light / Dark Theme Toggle -->
-        <button type="button" data-theme-toggle
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
-          aria-label="Toggle color theme" title="Switch Light/Dark Theme">
-          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
-          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
-        </button>
-
-        <!-- RTL / LTR Direction Toggle -->
-        <button type="button" data-rtl-toggle
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0"
-          aria-label="Toggle RTL or LTR layout" title="Toggle Right-to-Left Layout">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="m16 3 4 4-4 4"></path>
-            <path d="M20 7H4"></path>
-            <path d="m8 21-4-4 4-4"></path>
-            <path d="M4 17h16"></path>
-          </svg>
-        </button>
-
-        <!-- Sign Out Action -->
-        <a href="login.html" class="btn-sacred-outline text-xs px-4 py-2.5 whitespace-nowrap shrink-0">
-          <span>Sign Out</span>
-        </a>
-      </div>
-
-      <!-- Mobile / Tablet Hamburger Button -->
-      <div class="flex xl:hidden items-center gap-1.5 sm:gap-2.5 shrink-0">
-        <button type="button" id="dk-mobile-menu-btn"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
-          aria-label="Open navigation menu" aria-expanded="false" aria-controls="dk-mobile-menu">
-          <i data-lucide="menu" class="w-5 h-5"></i>
-        </button>
-      </div>
     </div>
 
-    <!-- Mobile Drawer Navigation -->
-    <div id="dk-mobile-menu"
-      class="hidden xl:hidden bg-theme-surface border-b border-theme-strong px-4 pt-3 pb-6 shadow-theme-elevated">
-      <div class="flex items-center justify-between pb-3 mb-3 border-b border-theme">
-        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Sacred Navigation &amp; Actions</span>
-        <button type="button" id="dk-mobile-menu-close"
-          class="text-xs font-semibold text-theme-muted hover:text-theme-primary px-2 py-1">Close ✕</button>
+    <div class="flex items-center gap-2">
+      <!-- Theme Toggle Button -->
+      <button type="button" data-theme-toggle
+        class="w-9 h-9 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0"
+        aria-label="Toggle theme" title="Toggle theme">
+        <i data-lucide="sun" class="w-4 h-4 hidden theme-icon-sun"></i>
+        <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+      </button>
+      <!-- Mini Avatar -->
+      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#702B32] to-[#C69B45] text-[#FFF9EF] font-bold text-xs flex items-center justify-center border border-brand-gold shrink-0">
+        RS
       </div>
-
-      <!-- UTILITY ICONS ROW -->
-      <div
-        class="flex items-center justify-center sm:justify-start gap-2 sm:gap-2.5 py-3 px-3 rounded-2xl bg-theme-secondary border border-theme mb-4 overflow-x-auto">
-        <button type="button" data-open-search
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
-          aria-label="Search products" title="Search Products">
-          <i data-lucide="search" class="w-4 h-4"></i>
-        </button>
-        <button type="button" data-open-wishlist
-          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
-          aria-label="Open wishlist" title="Saved Wishlist">
-          <i data-lucide="heart" class="w-4 h-4"></i>
-          <span data-wishlist-count
-            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C69B45] text-[#1F140E] text-[10px] font-bold flex items-center justify-center">0</span>
-        </button>
-        <button type="button" data-open-cart
-          class="relative w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
-          aria-label="Open shopping bag" title="Sacred Shopping Bag">
-          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-          <span data-cart-count
-            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#702B32] text-[#FFF9EF] text-[10px] font-bold flex items-center justify-center">0</span>
-        </button>
-        <button type="button" data-theme-toggle
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface flex items-center justify-center text-theme-primary hover:border-theme-strong hover:text-brand-gold transition shrink-0 shadow-sm"
-          aria-label="Toggle theme" title="Switch Light/Dark Theme">
-          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-[#E99A36]"></i>
-          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
-        </button>
-        <button type="button" data-rtl-toggle
-          class="w-10 h-10 rounded-full border border-theme bg-theme-surface text-brand-gold hover:border-theme-strong hover:text-brand-gold transition flex items-center justify-center shrink-0 shadow-sm"
-          aria-label="Toggle RTL layout" title="Toggle Right-to-Left Layout">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="m16 3 4 4-4 4"></path>
-            <path d="M20 7H4"></path>
-            <path d="m8 21-4-4 4-4"></path>
-            <path d="M4 17h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="flex flex-col space-y-2" aria-label="Mobile Navigation">
-        <a href="../index.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 1</a>
-        <a href="home-2.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Home 2</a>
-        <a href="about.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">About</a>
-        <a href="products.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Products</a>
-        <a href="services.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Services</a>
-        <a href="festival-calendar.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Festival Calendar</a>
-        <a href="contact.html"
-          class="px-3 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary font-medium text-sm">Contact</a>
-        <a href="dashboard.html"
-          class="px-3 py-2.5 rounded-xl bg-[#702B32] text-[#FFF9EF] font-semibold text-sm flex items-center justify-between">
-          <span>Patron Dashboard</span>
-          <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-white/20 text-[#FFF9EF]">Active</span>
-        </a>
-        <div class="pt-3 border-t border-theme">
-          <a href="login.html" class="btn-sacred-outline text-xs py-2.5 text-center w-full block">Sign Out</a>
-        </div>
-      </nav>
     </div>
   </header>
 
-  <!-- ========================================================================
-       MAIN DASHBOARD CONTENT
-       ======================================================================== -->
-  <main id="main-content" class="py-10 sm:py-16 bg-theme-primary min-h-[80vh]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+  <!-- Mobile Backdrop Overlay -->
+  <div id="sidebar-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 lg:hidden hidden transition-opacity duration-300"></div>
 
-      <!-- Patron Identity & Welcome Card -->
-      <div class="sacred-card p-6 sm:p-8 rounded-3xl bg-theme-surface border border-theme shadow-theme-elevated relative overflow-hidden" data-aos="fade-up">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
-          <!-- Patron Avatar & Details -->
-          <div class="flex items-center gap-4 sm:gap-5">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#702B32] to-[#C69B45] text-[#FFF9EF] font-bold text-xl sm:text-2xl flex items-center justify-center border-2 border-brand-gold shadow-theme-soft shrink-0">
+  <!-- Dashboard Application Shell -->
+  <div class="min-h-screen flex bg-theme-primary">
+
+    <!-- ========================================================================
+         LEFT SIDEBAR MENU (5 NAVIGATION CONTENT SECTIONS)
+         ======================================================================== -->
+    <aside id="dashboard-sidebar"
+      class="fixed inset-y-0 left-0 z-50 w-72 sm:w-80 lg:w-72 bg-theme-surface border-r border-theme flex flex-col justify-between transform -translate-x-full lg:translate-x-0 lg:static lg:h-screen lg:sticky lg:top-0 transition-transform duration-300 ease-in-out shadow-2xl lg:shadow-none overflow-y-auto">
+
+      <!-- Top: Brand Header & Patron Profile Mini Card -->
+      <div class="p-5 border-b border-theme/70 space-y-4">
+        <div class="flex items-center justify-between">
+          <a href="../index.html" class="flex items-center gap-3 group focus:outline-none" title="Return to Emporium">
+            <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Emblem"
+              class="w-10 h-10 object-contain transition-transform group-hover:scale-105 shrink-0" width="40" height="40" />
+            <div class="flex flex-col">
+              <span class="heading-serif text-xl font-bold text-theme-primary leading-tight">DivyaKala</span>
+              <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-bold">Patron Sanctum</span>
+            </div>
+          </a>
+          <button type="button" id="mobile-sidebar-close"
+            class="lg:hidden p-1.5 rounded-lg border border-theme text-theme-muted hover:text-theme-primary hover:bg-theme-secondary"
+            aria-label="Close sidebar">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Patron Identity Mini Card -->
+        <div class="p-3.5 rounded-2xl bg-theme-secondary border border-theme flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#702B32] to-[#C69B45] text-[#FFF9EF] font-bold text-base flex items-center justify-center border-2 border-brand-gold shadow-sm shrink-0">
+            RS
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-bold text-theme-primary text-xs sm:text-sm truncate">Sri Rajesh Sharma</h3>
+            <span class="inline-block px-2 py-0.5 mt-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#C69B45] text-[#1F140E]">
+              Suhasini Gold Tier
+            </span>
+            <p class="text-[10px] text-theme-muted truncate mt-0.5 font-mono">#DK-8921-2026</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center: 5 Sidebar Menu Content Links -->
+      <nav class="flex-1 px-3 py-4 space-y-1.5 overflow-y-auto" aria-label="Dashboard Menu">
+        <span class="px-3 text-[10px] font-bold uppercase tracking-wider text-theme-muted block mb-2">Sanctum Menu</span>
+
+        <!-- 1. Overview -->
+        <button type="button" data-tab="tab-overview"
+          class="dashboard-sidebar-tab active w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="layout-dashboard" class="w-4 h-4 shrink-0"></i>
+            <span>Overview</span>
+          </div>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+        </button>
+
+        <!-- 2. Orders & Shipments -->
+        <button type="button" data-tab="tab-orders"
+          class="dashboard-sidebar-tab w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="package" class="w-4 h-4 shrink-0"></i>
+            <span>Orders &amp; Shipments</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#C69B45]/20 text-brand-gold border border-brand-gold/40">3</span>
+        </button>
+
+        <!-- 3. Booked Seva & Rituals -->
+        <button type="button" data-tab="tab-services"
+          class="dashboard-sidebar-tab w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="flame" class="w-4 h-4 shrink-0"></i>
+            <span>Booked Seva &amp; Rituals</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#702B32]/25 text-rose-300 border border-rose-500/30">2</span>
+        </button>
+
+        <!-- 4. Mandir Profile & Addresses -->
+        <button type="button" data-tab="tab-mandir"
+          class="dashboard-sidebar-tab w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="home" class="w-4 h-4 shrink-0"></i>
+            <span>Mandir Profile &amp; Addresses</span>
+          </div>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+        </button>
+
+        <!-- 5. Account Preferences -->
+        <button type="button" data-tab="tab-settings"
+          class="dashboard-sidebar-tab w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="settings" class="w-4 h-4 shrink-0"></i>
+            <span>Account Preferences</span>
+          </div>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+        </button>
+      </nav>
+
+      <!-- Bottom: Punya Points & Utility Links -->
+      <div class="p-4 border-t border-theme/70 space-y-3">
+        <!-- Punya Points Mini Widget -->
+        <div class="p-3.5 rounded-2xl bg-theme-secondary border border-theme space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-brand-gold">Sacred Punya Points</span>
+            <span class="text-xs font-bold text-theme-primary font-mono">1,450 pts</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] pt-1">
+            <span class="text-theme-muted">₹1,450 Value</span>
+            <a href="products.html" class="text-brand-gold hover:underline font-bold flex items-center gap-1">
+              <span>Redeem</span>
+              <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-1 pt-1">
+          <!-- Theme Toggle inside Sidebar -->
+          <button type="button" data-theme-toggle
+            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-theme-secondary hover:text-theme-primary hover:bg-theme-secondary transition"
+            aria-label="Toggle visual theme">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="sun" class="w-4 h-4 hidden theme-icon-sun"></i>
+              <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+              <span class="theme-toggle-label">Theme Mode</span>
+            </div>
+            <span class="text-[10px] text-theme-muted">Light / Dark</span>
+          </button>
+
+          <!-- Back to Store -->
+          <a href="../index.html"
+            class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-theme-secondary hover:text-brand-gold hover:bg-theme-secondary transition">
+            <i data-lucide="store" class="w-4 h-4"></i>
+            <span>Return to Store</span>
+          </a>
+
+          <!-- Sign Out -->
+          <a href="login.html"
+            class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-rose-600 hover:text-rose-500 hover:bg-rose-500/10 transition">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+            <span>Sign Out</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+         MAIN DASHBOARD WORKSPACE (5 CONTENT PANELS)
+         ======================================================================== -->
+    <main id="main-content" class="flex-1 min-w-0 flex flex-col min-h-screen bg-theme-primary">
+      
+      <!-- Top Action Bar inside Main Area -->
+      <header class="sticky top-0 z-30 bg-theme-surface/90 backdrop-blur-md border-b border-theme px-4 sm:px-8 py-3.5 flex items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-[11px] text-theme-muted">
+            <span>Patron Sanctum</span>
+            <i data-lucide="chevron-right" class="w-3 h-3"></i>
+            <span class="text-brand-gold font-semibold">Sri Rajesh Sharma</span>
+          </div>
+          <h1 id="dashboard-view-title" class="heading-serif text-xl sm:text-2xl font-bold text-theme-primary leading-tight mt-0.5">
+            Overview
+          </h1>
+        </div>
+
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#C69B45]/15 text-brand-gold border border-brand-gold/30">
+            Bharadwaja Gotra
+          </span>
+          <a href="../index.html" class="btn-sacred-outline text-xs px-3.5 py-2 flex items-center gap-1.5">
+            <i data-lucide="store" class="w-3.5 h-3.5"></i>
+            <span>Store Emporium</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Scrollable Content Area with 5 Sections -->
+      <div class="p-4 sm:p-6 lg:p-8 space-y-8 max-w-6xl w-full mx-auto">
+        
+        <div class="sacred-card p-6 sm:p-8 rounded-3xl bg-theme-surface border border-theme shadow-theme-elevated relative overflow-hidden" data-aos="fade-up">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+<!-- Patron Avatar & Details -->
+<div class="flex items-center gap-4 sm:gap-5">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#702B32] to-[#C69B45] text-[#FFF9EF] font-bold text-xl sm:text-2xl flex items-center justify-center border-2 border-brand-gold shadow-theme-soft shrink-0">
               RS
             </div>
-            <div class="space-y-1">
-              <div class="flex items-center gap-2 flex-wrap">
-                <h1 class="heading-serif text-2xl sm:text-3xl font-bold text-theme-primary">
+<div class="space-y-1">
+<div class="flex items-center gap-2 flex-wrap">
+<h1 class="heading-serif text-2xl sm:text-3xl font-bold text-theme-primary">
                   Namaste, Sri Rajesh Sharma
                 </h1>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#C69B45] text-[#1F140E]">
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#C69B45] text-[#1F140E]">
                   Suhasini Gold Tier
                 </span>
-              </div>
-              <p class="text-xs sm:text-sm text-theme-muted">
+</div>
+<p class="text-xs sm:text-sm text-theme-muted">
                 Patron Member ID: <span class="font-mono font-semibold text-theme-primary">#DK-8921-2026</span> • Bharadwaja Gotra
               </p>
-            </div>
-          </div>
+</div>
+</div>
+<!-- Loyalty Points & Quick Action -->
+<div class="flex flex-wrap items-center gap-4 w-full md:w-auto pt-4 md:pt-0 border-t md:border-t-0 border-theme/60">
+<div class="px-4 py-3 rounded-2xl bg-theme-secondary border border-theme text-left">
+<span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold block">Sacred Punya Points</span>
+<span class="heading-serif text-xl sm:text-2xl font-bold text-theme-primary">1,450 pts</span>
+<span class="text-[11px] text-theme-muted block">(₹1,450 Redeemable Value)</span>
+</div>
+<a class="btn-sacred-primary text-xs px-5 py-3 whitespace-nowrap" href="products.html">
+<span>Redeem in Store</span>
+</a>
+</div>
+</div>
+</div>
 
-          <!-- Loyalty Points & Quick Action -->
-          <div class="flex flex-wrap items-center gap-4 w-full md:w-auto pt-4 md:pt-0 border-t md:border-t-0 border-theme/60">
-            <div class="px-4 py-3 rounded-2xl bg-theme-secondary border border-theme text-left">
-              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold block">Sacred Punya Points</span>
-              <span class="heading-serif text-xl sm:text-2xl font-bold text-theme-primary">1,450 pts</span>
-              <span class="text-[11px] text-theme-muted block">(₹1,450 Redeemable Value)</span>
-            </div>
-            <a href="products.html" class="btn-sacred-primary text-xs px-5 py-3 whitespace-nowrap">
-              <span>Redeem in Store</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dashboard Navigation Tabs -->
-      <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-2 border-b border-theme/60 text-xs sm:text-sm font-semibold" role="tablist">
-        <button type="button" class="dashboard-tab-btn active px-4 py-2.5 rounded-xl bg-[#702B32] text-[#FFF9EF] transition whitespace-nowrap" data-tab="tab-overview" role="tab" aria-selected="true">
-          <i data-lucide="layout-dashboard" class="w-4 h-4 inline-block mr-1.5 -mt-0.5"></i>
-          Overview
-        </button>
-        <button type="button" class="dashboard-tab-btn px-4 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary transition whitespace-nowrap" data-tab="tab-orders" role="tab" aria-selected="false">
-          <i data-lucide="package" class="w-4 h-4 inline-block mr-1.5 -mt-0.5"></i>
-          Orders &amp; Shipments (3)
-        </button>
-        <button type="button" class="dashboard-tab-btn px-4 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary transition whitespace-nowrap" data-tab="tab-services" role="tab" aria-selected="false">
-          <i data-lucide="flame" class="w-4 h-4 inline-block mr-1.5 -mt-0.5"></i>
-          Booked Seva &amp; Rituals (2)
-        </button>
-        <button type="button" class="dashboard-tab-btn px-4 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary transition whitespace-nowrap" data-tab="tab-mandir" role="tab" aria-selected="false">
-          <i data-lucide="home" class="w-4 h-4 inline-block mr-1.5 -mt-0.5"></i>
-          Mandir Profile &amp; Addresses
-        </button>
-        <button type="button" class="dashboard-tab-btn px-4 py-2.5 rounded-xl hover:bg-theme-secondary text-theme-primary transition whitespace-nowrap" data-tab="tab-settings" role="tab" aria-selected="false">
-          <i data-lucide="settings" class="w-4 h-4 inline-block mr-1.5 -mt-0.5"></i>
-          Account Preferences
-        </button>
-      </div>
-
-      <!-- ====================================================================
-           TAB 1: OVERVIEW CONTENT
-           ==================================================================== -->
-      <div id="tab-overview" class="dashboard-tab-content space-y-8">
-        
-        <!-- 4 Key Metric Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
-            <span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Total Orders</span>
-            <span class="heading-serif text-3xl font-bold text-theme-primary mt-1 block">8 Offerings</span>
-            <span class="text-[11px] text-brand-gold mt-1 block">3 Delivered this year</span>
-          </div>
-          <div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
-            <span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Active Services</span>
-            <span class="heading-serif text-3xl font-bold text-brand-gold mt-1 block">2 Scheduled</span>
-            <span class="text-[11px] text-theme-secondary mt-1 block">Griha Pravesh &amp; Nataraja</span>
-          </div>
-          <div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
-            <span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Loyalty Tier</span>
-            <span class="heading-serif text-3xl font-bold text-brand-maroon mt-1 block">Gold Guild</span>
-            <span class="text-[11px] text-theme-secondary mt-1 block">Free consecrated shipping</span>
-          </div>
-          <div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
-            <span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Saved Wishlist</span>
-            <span class="heading-serif text-3xl font-bold text-theme-primary mt-1 block">5 Items</span>
-            <span class="text-[11px] text-brand-gold mt-1 block">Akhand Jyoti in stock</span>
-          </div>
-        </div>
-
-        <!-- Live Shipment Tracker Banner -->
-        <div class="sacred-card p-6 sm:p-7 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-5">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-theme/60">
-            <div>
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#E99A36]/20 text-[#E99A36] border border-[#E99A36]/40 inline-block mb-1">
+        <div class="dashboard-tab-content space-y-8" id="tab-overview">
+<!-- 4 Key Metric Cards -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
+<span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Total Orders</span>
+<span class="heading-serif text-3xl font-bold text-theme-primary mt-1 block">8 Offerings</span>
+<span class="text-[11px] text-brand-gold mt-1 block">3 Delivered this year</span>
+</div>
+<div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
+<span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Active Services</span>
+<span class="heading-serif text-3xl font-bold text-brand-gold mt-1 block">2 Scheduled</span>
+<span class="text-[11px] text-theme-secondary mt-1 block">Griha Pravesh &amp; Nataraja</span>
+</div>
+<div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
+<span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Loyalty Tier</span>
+<span class="heading-serif text-3xl font-bold text-brand-maroon mt-1 block">Gold Guild</span>
+<span class="text-[11px] text-theme-secondary mt-1 block">Free consecrated shipping</span>
+</div>
+<div class="sacred-card p-5 rounded-2xl bg-theme-surface border border-theme">
+<span class="text-xs text-theme-muted uppercase tracking-wider font-semibold block">Saved Wishlist</span>
+<span class="heading-serif text-3xl font-bold text-theme-primary mt-1 block">5 Items</span>
+<span class="text-[11px] text-brand-gold mt-1 block">Akhand Jyoti in stock</span>
+</div>
+</div>
+<!-- Live Shipment Tracker Banner -->
+<div class="sacred-card p-6 sm:p-7 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-theme/60">
+<div>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#E99A36]/20 text-[#E99A36] border border-[#E99A36]/40 inline-block mb-1">
                 Out for Delivery Today
               </span>
-              <h2 class="heading-serif text-xl sm:text-2xl font-bold text-theme-primary">
+<h2 class="heading-serif text-xl sm:text-2xl font-bold text-theme-primary">
                 Order #DK-84920 — 9-Piece Sampoorna Brass Suite
               </h2>
-              <span class="text-xs text-theme-muted">Courier: BlueDart Express • Tracking AWB: 8492011884</span>
-            </div>
-            <a href="tel:+919840110808" class="btn-sacred-outline text-xs px-4 py-2 self-start sm:self-auto">
-              <span>Contact Courier Help</span>
-            </a>
-          </div>
-
-          <!-- 4-Stage Progress Visual -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
-            <div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
-              <span class="text-[10px] uppercase font-bold text-brand-gold block">1. Confirmed</span>
-              <span class="text-xs text-theme-primary font-semibold block">Order Placed</span>
-              <span class="text-[10px] text-theme-muted">Nov 4, 10:30 AM</span>
-            </div>
-            <div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
-              <span class="text-[10px] uppercase font-bold text-brand-gold block">2. Sanctum Consecration</span>
-              <span class="text-xs text-theme-primary font-semibold block">Pancha-Shuddhi Done</span>
-              <span class="text-[10px] text-theme-muted">Nov 5, Kumbakonam</span>
-            </div>
-            <div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
-              <span class="text-[10px] uppercase font-bold text-brand-gold block">3. In Transit</span>
-              <span class="text-xs text-theme-primary font-semibold block">Arrived at Bengaluru Hub</span>
-              <span class="text-[10px] text-theme-muted">Nov 7, 04:15 AM</span>
-            </div>
-            <div class="space-y-1 border-t-4 border-t-emerald-600 pt-2 animate-pulse">
-              <span class="text-[10px] uppercase font-bold text-emerald-600 block">4. Out for Delivery</span>
-              <span class="text-xs text-theme-primary font-semibold block">Expected by 4:00 PM</span>
-              <span class="text-[10px] text-theme-muted">Delivery Agent Assigned</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Upcoming Seva & Quick Reorder Two-Column -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
-          <!-- Upcoming Ritual Seva Card -->
-          <div class="lg:col-span-7 sacred-card p-6 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <h3 class="heading-serif text-xl font-bold text-theme-primary">Upcoming Ritual Appointment</h3>
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#702B32] text-[#FFF9EF]">Confirmed</span>
-            </div>
-            <div class="space-y-2">
-              <h4 class="heading-serif text-lg font-bold text-brand-gold">Griha Pravesh Samagri &amp; Purohit Seva</h4>
-              <p class="text-xs text-theme-secondary leading-relaxed">
+<span class="text-xs text-theme-muted">Courier: BlueDart Express • Tracking AWB: 8492011884</span>
+</div>
+<a class="btn-sacred-outline text-xs px-4 py-2 self-start sm:self-auto" href="tel:+919840110808">
+<span>Contact Courier Help</span>
+</a>
+</div>
+<!-- 4-Stage Progress Visual -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+<div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
+<span class="text-[10px] uppercase font-bold text-brand-gold block">1. Confirmed</span>
+<span class="text-xs text-theme-primary font-semibold block">Order Placed</span>
+<span class="text-[10px] text-theme-muted">Nov 4, 10:30 AM</span>
+</div>
+<div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
+<span class="text-[10px] uppercase font-bold text-brand-gold block">2. Sanctum Consecration</span>
+<span class="text-xs text-theme-primary font-semibold block">Pancha-Shuddhi Done</span>
+<span class="text-[10px] text-theme-muted">Nov 5, Kumbakonam</span>
+</div>
+<div class="space-y-1 border-t-4 border-t-brand-gold pt-2">
+<span class="text-[10px] uppercase font-bold text-brand-gold block">3. In Transit</span>
+<span class="text-xs text-theme-primary font-semibold block">Arrived at Bengaluru Hub</span>
+<span class="text-[10px] text-theme-muted">Nov 7, 04:15 AM</span>
+</div>
+<div class="space-y-1 border-t-4 border-t-emerald-600 pt-2 animate-pulse">
+<span class="text-[10px] uppercase font-bold text-emerald-600 block">4. Out for Delivery</span>
+<span class="text-xs text-theme-primary font-semibold block">Expected by 4:00 PM</span>
+<span class="text-[10px] text-theme-muted">Delivery Agent Assigned</span>
+</div>
+</div>
+</div>
+<!-- Upcoming Seva & Quick Reorder Two-Column -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Upcoming Ritual Seva Card -->
+<div class="lg:col-span-7 sacred-card p-6 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<h3 class="heading-serif text-xl font-bold text-theme-primary">Upcoming Ritual Appointment</h3>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#702B32] text-[#FFF9EF]">Confirmed</span>
+</div>
+<div class="space-y-2">
+<h4 class="heading-serif text-lg font-bold text-brand-gold">Griha Pravesh Samagri &amp; Purohit Seva</h4>
+<p class="text-xs text-theme-secondary leading-relaxed">
                 Scheduled for <strong class="text-theme-primary">Wednesday, Nov 18, 2026 at 06:15 AM (Brahma Muhurta)</strong>.
               </p>
-              <div class="pt-3 border-t border-theme/60 grid grid-cols-2 gap-3 text-xs">
-                <div>
-                  <span class="text-theme-muted block">Assigned Acharya:</span>
-                  <span class="font-bold text-theme-primary">Pandit Sri Rama Sastry (Varanasi)</span>
-                </div>
-                <div>
-                  <span class="text-theme-muted block">Samagri Status:</span>
-                  <span class="font-bold text-brand-gold">Dispatched to Whitefield Home</span>
-                </div>
-              </div>
-            </div>
-            <div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
-              <a href="services.html#services-booking" class="btn-sacred-outline text-xs px-4 py-2">
-                <span>View Seva Protocol</span>
-              </a>
-              <a href="tel:+919840110808" class="text-xs text-brand-gold hover:underline font-semibold">
+<div class="pt-3 border-t border-theme/60 grid grid-cols-2 gap-3 text-xs">
+<div>
+<span class="text-theme-muted block">Assigned Acharya:</span>
+<span class="font-bold text-theme-primary">Pandit Sri Rama Sastry (Varanasi)</span>
+</div>
+<div>
+<span class="text-theme-muted block">Samagri Status:</span>
+<span class="font-bold text-brand-gold">Dispatched to Whitefield Home</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-theme/60 flex items-center justify-between gap-3">
+<a class="btn-sacred-outline text-xs px-4 py-2" href="services.html#services-booking">
+<span>View Seva Protocol</span>
+</a>
+<a class="text-xs text-brand-gold hover:underline font-semibold" href="tel:+919840110808">
                 Speak to Assigned Pandit →
               </a>
-            </div>
-          </div>
+</div>
+</div>
+<!-- Quick Samagri Reorder Card -->
+<div class="lg:col-span-5 sacred-card p-6 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<h3 class="heading-serif text-xl font-bold text-theme-primary">Quick Samagri Re-order</h3>
+<a class="text-xs text-brand-gold hover:underline" href="products.html">View Catalog</a>
+</div>
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="flex items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-3">
+<img alt="Mysore Sandalwood Incense" class="w-10 h-10 rounded-lg object-cover" src="../assets/images/h1-cat-incense.webp"/>
+<div>
+<span class="font-bold text-theme-primary block">Temple Sandalwood Agarbatti</span>
+<span class="text-theme-muted">250g Pack • ₹380</span>
+</div>
+</div>
+<button class="btn-sacred-primary text-[11px] px-3 py-1.5" type="button">Add</button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between gap-3 text-xs pt-2 border-t border-theme/60">
+<div class="flex items-center gap-3">
+<img alt="Bhimseni Camphor" class="w-10 h-10 rounded-lg object-cover" src="../assets/images/h1-prod-3.webp"/>
+<div>
+<span class="font-bold text-theme-primary block">Pure Bhimseni Camphor Jar</span>
+<span class="text-theme-muted">100g Consecrated • ₹450</span>
+</div>
+</div>
+<button class="btn-sacred-primary text-[11px] px-3 py-1.5" type="button">Add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-          <!-- Quick Samagri Reorder Card -->
-          <div class="lg:col-span-5 sacred-card p-6 rounded-3xl bg-theme-surface border border-theme shadow-theme-soft space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <h3 class="heading-serif text-xl font-bold text-theme-primary">Quick Samagri Re-order</h3>
-              <a href="products.html" class="text-xs text-brand-gold hover:underline">View Catalog</a>
-            </div>
-            <div class="space-y-3">
-              <!-- Item 1 -->
-              <div class="flex items-center justify-between gap-3 text-xs">
-                <div class="flex items-center gap-3">
-                  <img src="../assets/images/h1-cat-incense.webp" alt="Mysore Sandalwood Incense" class="w-10 h-10 rounded-lg object-cover" />
-                  <div>
-                    <span class="font-bold text-theme-primary block">Temple Sandalwood Agarbatti</span>
-                    <span class="text-theme-muted">250g Pack • ₹380</span>
-                  </div>
-                </div>
-                <button type="button" class="btn-sacred-primary text-[11px] px-3 py-1.5">Add</button>
-              </div>
-              <!-- Item 2 -->
-              <div class="flex items-center justify-between gap-3 text-xs pt-2 border-t border-theme/60">
-                <div class="flex items-center gap-3">
-                  <img src="../assets/images/h1-prod-3.webp" alt="Bhimseni Camphor" class="w-10 h-10 rounded-lg object-cover" />
-                  <div>
-                    <span class="font-bold text-theme-primary block">Pure Bhimseni Camphor Jar</span>
-                    <span class="text-theme-muted">100g Consecrated • ₹450</span>
-                  </div>
-                </div>
-                <button type="button" class="btn-sacred-primary text-[11px] px-3 py-1.5">Add</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- ====================================================================
-           TAB 2: ORDERS & SHIPMENTS
-           ==================================================================== -->
-      <div id="tab-orders" class="dashboard-tab-content hidden space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
-          <h2 class="heading-serif text-2xl font-bold text-theme-primary">Your Sacred Orders &amp; Invoices</h2>
-          <span class="text-xs text-theme-muted">Showing 3 most recent auspicious acquisitions</span>
-        </div>
-
-        <div class="space-y-4">
-          <!-- Order Card 1 -->
-          <div class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-theme/60 text-xs">
-              <div>
-                <span class="font-bold text-theme-primary">Order #DK-84920</span>
-                <span class="text-theme-muted mx-2">•</span>
-                <span class="text-theme-muted">Placed on Nov 4, 2026</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#E99A36]/20 text-[#E99A36] border border-[#E99A36]/40">
+        <div class="dashboard-tab-content hidden space-y-6" id="tab-orders">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
+<h2 class="heading-serif text-2xl font-bold text-theme-primary">Your Sacred Orders &amp; Invoices</h2>
+<span class="text-xs text-theme-muted">Showing 3 most recent auspicious acquisitions</span>
+</div>
+<div class="space-y-4">
+<!-- Order Card 1 -->
+<div class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-theme/60 text-xs">
+<div>
+<span class="font-bold text-theme-primary">Order #DK-84920</span>
+<span class="text-theme-muted mx-2">•</span>
+<span class="text-theme-muted">Placed on Nov 4, 2026</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#E99A36]/20 text-[#E99A36] border border-[#E99A36]/40">
                   Out for Delivery
                 </span>
-                <span class="font-bold text-brand-gold">₹14,900</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <img src="../assets/images/prod-offer-temple.webp" alt="9-Piece Sampoorna Brass Suite" class="w-16 h-16 rounded-xl object-cover shrink-0" />
-              <div class="space-y-1 text-xs">
-                <h3 class="font-bold text-theme-primary text-sm">9-Piece Sampoorna Brass Sanctum Suite</h3>
-                <p class="text-theme-secondary">Pair of Nilavilakku lamps, Ashtalakshmi Thali, Nandi temple bell &amp; Urli.</p>
-                <span class="text-brand-gold font-semibold">Includes Pancha-Shuddhi Certificate of Sanctification</span>
-              </div>
-            </div>
-            <div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
-              <a href="#" onclick="alert('Downloading Tax Invoice #DK-84920...'); return false;" class="text-theme-primary hover:text-brand-gold font-semibold flex items-center gap-1">
-                <i data-lucide="download" class="w-3.5 h-3.5"></i>
-                <span>Download Invoice</span>
-              </a>
-              <a href="contact.html" class="btn-sacred-outline text-xs px-4 py-2">
-                <span>Track Package</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Order Card 2 -->
-          <div class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-theme/60 text-xs">
-              <div>
-                <span class="font-bold text-theme-primary">Order #DK-79215</span>
-                <span class="text-theme-muted mx-2">•</span>
-                <span class="text-theme-muted">Placed on Oct 14, 2026</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-700/20 text-emerald-500 border border-emerald-600/30">
+<span class="font-bold text-brand-gold">₹14,900</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<img alt="9-Piece Sampoorna Brass Suite" class="w-16 h-16 rounded-xl object-cover shrink-0" src="../assets/images/prod-offer-temple.webp"/>
+<div class="space-y-1 text-xs">
+<h3 class="font-bold text-theme-primary text-sm">9-Piece Sampoorna Brass Sanctum Suite</h3>
+<p class="text-theme-secondary">Pair of Nilavilakku lamps, Ashtalakshmi Thali, Nandi temple bell &amp; Urli.</p>
+<span class="text-brand-gold font-semibold">Includes Pancha-Shuddhi Certificate of Sanctification</span>
+</div>
+</div>
+<div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
+<a class="text-theme-primary hover:text-brand-gold font-semibold flex items-center gap-1" href="#" onclick="alert('Downloading Tax Invoice #DK-84920...'); return false;">
+<i class="w-3.5 h-3.5" data-lucide="download"></i>
+<span>Download Invoice</span>
+</a>
+<a class="btn-sacred-outline text-xs px-4 py-2" href="contact.html">
+<span>Track Package</span>
+</a>
+</div>
+</div>
+<!-- Order Card 2 -->
+<div class="sacred-card p-5 sm:p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-theme/60 text-xs">
+<div>
+<span class="font-bold text-theme-primary">Order #DK-79215</span>
+<span class="text-theme-muted mx-2">•</span>
+<span class="text-theme-muted">Placed on Oct 14, 2026</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-700/20 text-emerald-500 border border-emerald-600/30">
                   Delivered
                 </span>
-                <span class="font-bold text-brand-gold">₹4,850</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <img src="../assets/images/h1-prod-1.webp" alt="Kumbakonam Panchamukhi Nilavilakku" class="w-16 h-16 rounded-xl object-cover shrink-0" />
-              <div class="space-y-1 text-xs">
-                <h3 class="font-bold text-theme-primary text-sm">Kumbakonam Panchamukhi Nilavilakku (24-inch)</h3>
-                <p class="text-theme-secondary">100% Solid Temple Brass • Delivered to Bengaluru Address</p>
-                <span class="text-emerald-500 font-semibold">Delivered on Oct 18, 2026</span>
-              </div>
-            </div>
-            <div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
-              <a href="#" onclick="alert('Downloading Tax Invoice #DK-79215...'); return false;" class="text-theme-primary hover:text-brand-gold font-semibold flex items-center gap-1">
-                <i data-lucide="download" class="w-3.5 h-3.5"></i>
-                <span>Download Invoice</span>
-              </a>
-              <a href="products.html" class="btn-sacred-primary text-xs px-4 py-2">
-                <span>Buy Again</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+<span class="font-bold text-brand-gold">₹4,850</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Kumbakonam Panchamukhi Nilavilakku" class="w-16 h-16 rounded-xl object-cover shrink-0" src="../assets/images/h1-prod-1.webp"/>
+<div class="space-y-1 text-xs">
+<h3 class="font-bold text-theme-primary text-sm">Kumbakonam Panchamukhi Nilavilakku (24-inch)</h3>
+<p class="text-theme-secondary">100% Solid Temple Brass • Delivered to Bengaluru Address</p>
+<span class="text-emerald-500 font-semibold">Delivered on Oct 18, 2026</span>
+</div>
+</div>
+<div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
+<a class="text-theme-primary hover:text-brand-gold font-semibold flex items-center gap-1" href="#" onclick="alert('Downloading Tax Invoice #DK-79215...'); return false;">
+<i class="w-3.5 h-3.5" data-lucide="download"></i>
+<span>Download Invoice</span>
+</a>
+<a class="btn-sacred-primary text-xs px-4 py-2" href="products.html">
+<span>Buy Again</span>
+</a>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- ====================================================================
-           TAB 3: BOOKED RITUALS & SEVA
-           ==================================================================== -->
-      <div id="tab-services" class="dashboard-tab-content hidden space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
-          <h2 class="heading-serif text-2xl font-bold text-theme-primary">Scheduled Ceremonies &amp; Foundry Commissions</h2>
-          <a href="services.html#services-booking" class="btn-sacred-primary text-xs px-4 py-2">
-            <span>+ Book New Seva</span>
-          </a>
-        </div>
-
-        <div class="space-y-4">
-          <!-- Service 1 -->
-          <div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <div class="space-y-0.5">
-                <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest block">Seva Booking #SV-1048</span>
-                <h3 class="heading-serif text-xl font-bold text-theme-primary">Griha Pravesh Samagri &amp; Vedic Purohit Seva</h3>
-              </div>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Confirmed</span>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-              <div>
-                <span class="text-theme-muted block">Scheduled Muhurta:</span>
-                <span class="font-bold text-theme-primary">Nov 18, 2026 • 06:15 AM IST</span>
-              </div>
-              <div>
-                <span class="text-theme-muted block">Location:</span>
-                <span class="font-bold text-theme-primary">Whitefield Villa, Bengaluru</span>
-              </div>
-              <div>
-                <span class="text-theme-muted block">Lead Priest:</span>
-                <span class="font-bold text-brand-gold">Sri Rama Sastry (+91 98401 10808)</span>
-              </div>
-            </div>
-            <div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
-              <span class="text-theme-secondary">Includes 32+ item consecrated Griha Pravesh Samagri box.</span>
-              <a href="tel:+919840110808" class="btn-sacred-outline text-xs px-4 py-2">
-                <span>Call Concierge</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Service 2 -->
-          <div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <div class="space-y-0.5">
-                <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest block">Foundry Commission #FC-3910</span>
-                <h3 class="heading-serif text-xl font-bold text-theme-primary">12-Inch Swamimalai Bronze Nataraja Vigraha</h3>
-              </div>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">Foundry Stage 3 / 5</span>
-            </div>
-            <p class="text-xs text-theme-secondary leading-relaxed">
+        <div class="dashboard-tab-content hidden space-y-6" id="tab-services">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
+<h2 class="heading-serif text-2xl font-bold text-theme-primary">Scheduled Ceremonies &amp; Foundry Commissions</h2>
+<a class="btn-sacred-primary text-xs px-4 py-2" href="services.html#services-booking">
+<span>+ Book New Seva</span>
+</a>
+</div>
+<div class="space-y-4">
+<!-- Service 1 -->
+<div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<div class="space-y-0.5">
+<span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest block">Seva Booking #SV-1048</span>
+<h3 class="heading-serif text-xl font-bold text-theme-primary">Griha Pravesh Samagri &amp; Vedic Purohit Seva</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-[#702B32] text-[#FFF9EF]">Confirmed</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+<div>
+<span class="text-theme-muted block">Scheduled Muhurta:</span>
+<span class="font-bold text-theme-primary">Nov 18, 2026 • 06:15 AM IST</span>
+</div>
+<div>
+<span class="text-theme-muted block">Location:</span>
+<span class="font-bold text-theme-primary">Whitefield Villa, Bengaluru</span>
+</div>
+<div>
+<span class="text-theme-muted block">Lead Priest:</span>
+<span class="font-bold text-brand-gold">Sri Rama Sastry (+91 98401 10808)</span>
+</div>
+</div>
+<div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
+<span class="text-theme-secondary">Includes 32+ item consecrated Griha Pravesh Samagri box.</span>
+<a class="btn-sacred-outline text-xs px-4 py-2" href="tel:+919840110808">
+<span>Call Concierge</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<div class="space-y-0.5">
+<span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest block">Foundry Commission #FC-3910</span>
+<h3 class="heading-serif text-xl font-bold text-theme-primary">12-Inch Swamimalai Bronze Nataraja Vigraha</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-[#C69B45] text-[#1F140E]">Foundry Stage 3 / 5</span>
+</div>
+<p class="text-xs text-theme-secondary leading-relaxed">
               Master Sthapati Sri Swaminathan has completed the lost-wax beeswax sculpting and has applied the traditional Kaveri silt clay moulding. Next stage: molten bronze pour on auspicious Pushya Nakshatra.
             </p>
-            <div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
-              <span class="text-brand-gold font-semibold">Estimated Foundry Completion: Dec 12, 2026</span>
-              <a href="contact.html" class="btn-sacred-primary text-xs px-4 py-2">
-                <span>Request Workshop Photo</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="pt-3 border-t border-theme/60 flex items-center justify-between gap-3 text-xs">
+<span class="text-brand-gold font-semibold">Estimated Foundry Completion: Dec 12, 2026</span>
+<a class="btn-sacred-primary text-xs px-4 py-2" href="contact.html">
+<span>Request Workshop Photo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- ====================================================================
-           TAB 4: MANDIR PROFILE & ADDRESSES
-           ==================================================================== -->
-      <div id="tab-mandir" class="dashboard-tab-content hidden space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
-          <h2 class="heading-serif text-2xl font-bold text-theme-primary">Sacred Mandir Profile &amp; Family Sankalpa</h2>
-          <span class="text-xs text-theme-muted">Used for personalized festival archana and delivery</span>
-        </div>
+        <div class="dashboard-tab-content hidden space-y-6" id="tab-mandir">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme">
+<h2 class="heading-serif text-2xl font-bold text-theme-primary">Sacred Mandir Profile &amp; Family Sankalpa</h2>
+<span class="text-xs text-theme-muted">Used for personalized festival archana and delivery</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Family Gotra & Astrological Card -->
+<div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<h3 class="heading-serif text-lg font-bold text-theme-primary">Family Gotra &amp; Nakshatra</h3>
+<button class="text-xs text-brand-gold hover:underline font-semibold" onclick="alert('Profile details ready for edit.')" type="button">Edit Details</button>
+</div>
+<div class="space-y-2.5 text-xs">
+<div class="flex justify-between py-1 border-b border-theme/40">
+<span class="text-theme-muted">Family Gotra:</span>
+<span class="font-bold text-theme-primary">Bharadwaja</span>
+</div>
+<div class="flex justify-between py-1 border-b border-theme/40">
+<span class="text-theme-muted">Kula Devata (Family Deity):</span>
+<span class="font-bold text-theme-primary">Sri Venkateswara (Tirumala)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-theme/40">
+<span class="text-theme-muted">Head of Family Nakshatra:</span>
+<span class="font-bold text-theme-primary">Rohini • Vrishabha Rashi</span>
+</div>
+<div class="flex justify-between py-1 border-b border-theme/40">
+<span class="text-theme-muted">Veda Samhita Tradition:</span>
+<span class="font-bold text-theme-primary">Krishna Yajur Veda</span>
+</div>
+</div>
+</div>
+<!-- Saved Sanctum Delivery Addresses -->
+<div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-theme/60">
+<h3 class="heading-serif text-lg font-bold text-theme-primary">Saved Altar Addresses</h3>
+<button class="text-xs text-brand-gold hover:underline font-semibold" onclick="alert('Address modal ready.')" type="button">+ Add Address</button>
+</div>
+<div class="space-y-3 text-xs">
+<div class="p-3.5 rounded-xl bg-theme-secondary border border-brand-gold/40 relative">
+<span class="px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-[#C69B45] text-[#1F140E] absolute top-3 right-3">Default Mandir</span>
+<h4 class="font-bold text-theme-primary text-sm">Whitefield Sanctum Residence</h4>
+<p class="text-theme-secondary mt-1">Villa 42, Palm Meadows, Ramagondanahalli, Whitefield, Bengaluru, Karnataka 560066</p>
+<span class="text-theme-muted mt-1 block">Phone: +91 98401 10808</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Family Gotra & Astrological Card -->
-          <div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <h3 class="heading-serif text-lg font-bold text-theme-primary">Family Gotra &amp; Nakshatra</h3>
-              <button type="button" class="text-xs text-brand-gold hover:underline font-semibold" onclick="alert('Profile details ready for edit.')">Edit Details</button>
-            </div>
-            <div class="space-y-2.5 text-xs">
-              <div class="flex justify-between py-1 border-b border-theme/40">
-                <span class="text-theme-muted">Family Gotra:</span>
-                <span class="font-bold text-theme-primary">Bharadwaja</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-theme/40">
-                <span class="text-theme-muted">Kula Devata (Family Deity):</span>
-                <span class="font-bold text-theme-primary">Sri Venkateswara (Tirumala)</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-theme/40">
-                <span class="text-theme-muted">Head of Family Nakshatra:</span>
-                <span class="font-bold text-theme-primary">Rohini • Vrishabha Rashi</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-theme/40">
-                <span class="text-theme-muted">Veda Samhita Tradition:</span>
-                <span class="font-bold text-theme-primary">Krishna Yajur Veda</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Saved Sanctum Delivery Addresses -->
-          <div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-theme/60">
-              <h3 class="heading-serif text-lg font-bold text-theme-primary">Saved Altar Addresses</h3>
-              <button type="button" class="text-xs text-brand-gold hover:underline font-semibold" onclick="alert('Address modal ready.')">+ Add Address</button>
-            </div>
-            <div class="space-y-3 text-xs">
-              <div class="p-3.5 rounded-xl bg-theme-secondary border border-brand-gold/40 relative">
-                <span class="px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-[#C69B45] text-[#1F140E] absolute top-3 right-3">Default Mandir</span>
-                <h4 class="font-bold text-theme-primary text-sm">Whitefield Sanctum Residence</h4>
-                <p class="text-theme-secondary mt-1">Villa 42, Palm Meadows, Ramagondanahalli, Whitefield, Bengaluru, Karnataka 560066</p>
-                <span class="text-theme-muted mt-1 block">Phone: +91 98401 10808</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ====================================================================
-           TAB 5: ACCOUNT PREFERENCES
-           ==================================================================== -->
-      <div id="tab-settings" class="dashboard-tab-content hidden space-y-6">
-        <div class="pb-4 border-b border-theme">
-          <h2 class="heading-serif text-2xl font-bold text-theme-primary">Account Preferences &amp; Auspicious Alerts</h2>
-        </div>
-
-        <div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card max-w-2xl space-y-6">
-          <div class="space-y-4">
-            <h3 class="heading-serif text-lg font-bold text-theme-primary">Sanctum Notification Channels</h3>
-            
-            <label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
-              <span class="text-xs font-semibold text-theme-primary">WhatsApp Shipping &amp; Live Darshan Links</span>
-              <input type="checkbox" checked class="w-4 h-4 accent-[#702B32]" />
-            </label>
-
-            <label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
-              <span class="text-xs font-semibold text-theme-primary">SMS Alerts for Major Festival Muhurtas &amp; Tithis</span>
-              <input type="checkbox" checked class="w-4 h-4 accent-[#702B32]" />
-            </label>
-
-            <label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
-              <span class="text-xs font-semibold text-theme-primary">Monthly Pancha-Shuddhi Samagri Refill Reminder</span>
-              <input type="checkbox" checked class="w-4 h-4 accent-[#702B32]" />
-            </label>
-          </div>
-
-          <div class="pt-4 border-t border-theme/60 flex items-center justify-between">
-            <button type="button" onclick="alert('Preferences saved successfully.')" class="btn-sacred-primary text-xs px-6 py-2.5">
-              <span>Save Preferences</span>
-            </button>
-            <a href="login.html" class="text-xs text-rose-600 hover:underline font-semibold">
+        <div class="dashboard-tab-content hidden space-y-6" id="tab-settings">
+<div class="pb-4 border-b border-theme">
+<h2 class="heading-serif text-2xl font-bold text-theme-primary">Account Preferences &amp; Auspicious Alerts</h2>
+</div>
+<div class="sacred-card p-6 rounded-2xl bg-theme-surface border border-theme shadow-theme-card max-w-2xl space-y-6">
+<div class="space-y-4">
+<h3 class="heading-serif text-lg font-bold text-theme-primary">Sanctum Notification Channels</h3>
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
+<span class="text-xs font-semibold text-theme-primary">WhatsApp Shipping &amp; Live Darshan Links</span>
+<input checked="" class="w-4 h-4 accent-[#702B32]" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
+<span class="text-xs font-semibold text-theme-primary">SMS Alerts for Major Festival Muhurtas &amp; Tithis</span>
+<input checked="" class="w-4 h-4 accent-[#702B32]" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-theme-secondary border border-theme cursor-pointer">
+<span class="text-xs font-semibold text-theme-primary">Monthly Pancha-Shuddhi Samagri Refill Reminder</span>
+<input checked="" class="w-4 h-4 accent-[#702B32]" type="checkbox"/>
+</label>
+</div>
+<div class="pt-4 border-t border-theme/60 flex items-center justify-between">
+<button class="btn-sacred-primary text-xs px-6 py-2.5" onclick="alert('Preferences saved successfully.')" type="button">
+<span>Save Preferences</span>
+</button>
+<a class="text-xs text-rose-600 hover:underline font-semibold" href="login.html">
               Sign Out of Account
             </a>
-          </div>
-        </div>
+</div>
+</div>
+</div>
+
       </div>
-
-    </div>
-  </main>
-
-  <!-- ========================================================================
-       PRIMARY SITE FOOTER
-       ======================================================================== -->
-  <footer class="bg-[#1C120F] text-[#EAE0D2] pt-16 pb-10 border-t-2 border-[#C69B45]/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#C69B45]/25">
-        <div class="lg:col-span-4 space-y-4">
-          <a href="../index.html" class="flex items-center gap-3 group">
-            <img src="../assets/images/logo-divyakala.svg" alt="DivyaKala Emblem" class="w-10 h-10 object-contain" width="40" height="40" />
-            <div class="flex flex-col">
-              <span class="heading-serif text-2xl font-bold text-[#FFF9EF]">DivyaKala</span>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Sacred Pooja Emporium</span>
-            </div>
-          </a>
-          <p class="text-xs text-[#C5B7A5] leading-relaxed">
-            Preserving canonical Vedic craftsmanship since 1984. Revered source of Kumbakonam brass lamps, Swamimalai bronze vigrahas, and authentic pooja samagri.
-          </p>
-        </div>
-
-        <div class="lg:col-span-2 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Sacred Portals</span>
-          <ul class="space-y-2 text-xs">
-            <li><a href="../index.html" class="hover:text-brand-gold transition">Home 1</a></li>
-            <li><a href="home-2.html" class="hover:text-brand-gold transition">Home 2</a></li>
-            <li><a href="about.html" class="hover:text-brand-gold transition">About Us</a></li>
-            <li><a href="products.html" class="hover:text-brand-gold transition">Products Catalog</a></li>
-            <li><a href="services.html" class="hover:text-brand-gold transition">Services &amp; Seva</a></li>
-            <li><a href="festival-calendar.html" class="hover:text-brand-gold transition">Festival Calendar</a></li>
-          </ul>
-        </div>
-
-        <div class="lg:col-span-3 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Patron Portals</span>
-          <ul class="space-y-2 text-xs">
-            <li><a href="dashboard.html" class="text-brand-gold font-semibold">Patron Dashboard</a></li>
-            <li><a href="services.html#services-booking" class="hover:text-brand-gold transition">Book a Priest</a></li>
-            <li><a href="products.html" class="hover:text-brand-gold transition">Redeem Punya Points</a></li>
-            <li><a href="contact.html" class="hover:text-brand-gold transition">Concierge Support</a></li>
-          </ul>
-        </div>
-
-        <div class="lg:col-span-3 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block">Sanctum Concierge</span>
-          <div class="space-y-2 text-xs text-[#C5B7A5]">
-            <p class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-brand-gold shrink-0"></i>
-              <span>+91 98401 10808 (9 AM – 8 PM IST)</span>
-            </p>
-            <p class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
-              <span>seva@divyakala.com</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A89885]">
-        <p>© 2026 DivyaKala Sacred Pooja Emporium. All Rights Reserved.</p>
-        <p>Patron Portal v2.4 • Secured with 256-Bit SSL</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Search & Cart Containers -->
-  <div id="search-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-start justify-center pt-20 px-4">
-    <div class="sacred-card max-w-2xl w-full p-6 shadow-theme-elevated">
-      <div class="flex items-center justify-between pb-4 border-b border-theme">
-        <h3 class="heading-serif text-xl font-bold text-theme-primary">Search Offerings</h3>
-        <button type="button" data-close-search class="text-theme-muted hover:text-theme-primary text-xl">✕</button>
-      </div>
-      <div class="mt-4">
-        <input type="text" data-search-input placeholder="Search..."
-          class="w-full px-4 py-3 rounded-xl border border-theme bg-theme-secondary text-theme-primary text-sm focus:border-brand-gold focus:outline-none" />
-      </div>
-      <div data-search-results class="mt-4 max-h-72 overflow-y-auto space-y-2"></div>
-    </div>
-  </div>
-
-  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/50 backdrop-blur-xs" data-close-cart></div>
-    <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-theme-surface border-l border-theme p-6 shadow-theme-elevated flex flex-col justify-between overflow-y-auto">
-      <div>
-        <div class="flex items-center justify-between pb-4 border-b border-theme">
-          <h3 class="heading-serif text-xl font-bold text-theme-primary">Sacred Shopping Bag</h3>
-          <button type="button" data-close-cart class="text-theme-muted hover:text-theme-primary text-xl">✕</button>
-        </div>
-        <div data-cart-items class="mt-4 divide-y divide-theme"></div>
-      </div>
-      <div class="pt-4 border-t border-theme space-y-3">
-        <div class="flex items-center justify-between text-sm">
-          <span class="text-theme-secondary">Total:</span>
-          <span data-cart-total class="heading-serif font-bold text-brand-gold text-lg">₹0</span>
-        </div>
-        <a href="products.html" class="btn-sacred-primary text-xs py-3 text-center block w-full">Proceed to Sacred Checkout</a>
-      </div>
-    </div>
+    </main>
   </div>
 
   <!-- Lucide & Scripts -->
@@ -785,40 +654,89 @@
       if (typeof lucide !== 'undefined') lucide.createIcons();
       if (typeof AOS !== 'undefined') AOS.init({ duration: 750, once: true });
 
-      // Tab Switching Logic
-      var tabButtons = document.querySelectorAll('.dashboard-tab-btn');
+      // Sidebar Tab Switching
+      var tabButtons = document.querySelectorAll('.dashboard-sidebar-tab');
       var tabContents = document.querySelectorAll('.dashboard-tab-content');
+      var viewTitle = document.getElementById('dashboard-view-title');
+      var sidebar = document.getElementById('dashboard-sidebar');
+      var backdrop = document.getElementById('sidebar-backdrop');
+      var mobileToggle = document.getElementById('mobile-sidebar-toggle');
+      var mobileClose = document.getElementById('mobile-sidebar-close');
 
+      var tabNames = {
+        'tab-overview': 'Overview',
+        'tab-orders': 'Orders & Shipments',
+        'tab-services': 'Booked Seva & Rituals',
+        'tab-mandir': 'Mandir Profile & Addresses',
+        'tab-settings': 'Account Preferences'
+      };
+
+      function switchTab(targetId) {
+        // Update sidebar button states
+        tabButtons.forEach(function (btn) {
+          if (btn.getAttribute('data-tab') === targetId) {
+            btn.classList.add('bg-[#702B32]', 'text-[#FFF9EF]', 'active', 'shadow-xs');
+            btn.classList.remove('hover:bg-theme-secondary', 'text-theme-primary');
+          } else {
+            btn.classList.remove('bg-[#702B32]', 'text-[#FFF9EF]', 'active', 'shadow-xs');
+            btn.classList.add('hover:bg-theme-secondary', 'text-theme-primary');
+          }
+        });
+
+        // Toggle content panels
+        tabContents.forEach(function (content) {
+          if (content.id === targetId) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+
+        // Update view title in top bar
+        if (viewTitle && tabNames[targetId]) {
+          viewTitle.textContent = tabNames[targetId];
+        }
+
+        // Refresh icons inside newly visible panel
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+      }
+
+      // Initialize tabs
       tabButtons.forEach(function (btn) {
+        if (btn.classList.contains('active')) {
+          btn.classList.add('bg-[#702B32]', 'text-[#FFF9EF]', 'shadow-xs');
+        } else {
+          btn.classList.add('hover:bg-theme-secondary', 'text-theme-primary');
+        }
+
         btn.addEventListener('click', function () {
           var targetId = btn.getAttribute('data-tab');
-
-          // Reset buttons
-          tabButtons.forEach(function (b) {
-            b.classList.remove('bg-[#702B32]', 'text-[#FFF9EF]', 'active');
-            b.classList.add('hover:bg-theme-secondary', 'text-theme-primary');
-            b.setAttribute('aria-selected', 'false');
-          });
-
-          // Activate clicked button
-          btn.classList.add('bg-[#702B32]', 'text-[#FFF9EF]', 'active');
-          btn.classList.remove('hover:bg-theme-secondary', 'text-theme-primary');
-          btn.setAttribute('aria-selected', 'true');
-
-          // Hide all contents
-          tabContents.forEach(function (content) {
-            content.classList.add('hidden');
-          });
-
-          // Show targeted content
-          var targetContent = document.getElementById(targetId);
-          if (targetContent) {
-            targetContent.classList.remove('hidden');
+          if (targetId) {
+            switchTab(targetId);
+            closeMobileSidebar();
           }
         });
       });
+
+      // Mobile Sidebar Handlers
+      function openMobileSidebar() {
+        if (sidebar) sidebar.classList.remove('-translate-x-full');
+        if (backdrop) backdrop.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden', 'lg:overflow-auto');
+      }
+
+      function closeMobileSidebar() {
+        if (sidebar) sidebar.classList.add('-translate-x-full');
+        if (backdrop) backdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
+      }
+
+      if (mobileToggle) mobileToggle.addEventListener('click', openMobileSidebar);
+      if (mobileClose) mobileClose.addEventListener('click', closeMobileSidebar);
+      if (backdrop) backdrop.addEventListener('click', closeMobileSidebar);
     });
   </script>
 </body>
 </html>
-
